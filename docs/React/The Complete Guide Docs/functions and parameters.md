@@ -49,3 +49,15 @@ greet("Frazer") // Hello Frazer
 * Whenever you create functions, you should describe what's inside of it, or what it does
 * Functions can also be used for producing and returning values
 * They should be named to ensure it's very clear what a function does
+
+```js
+function combine(a, b, c) {
+  return a * b / c
+}
+
+console.log(combine(2, 3, 4)) // 1.5
+```
+
+## Arrow Functions
+* Arrow functions are very popular with anonymous functions, where the function does not need a name
+* 
