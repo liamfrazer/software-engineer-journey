@@ -2,6 +2,7 @@
 tags:
   - Declarative
   - Imperative
+  - react
 ---
 # Why Use React
 

@@ -1,9 +1,10 @@
-# Software Engineer Journey
+# Home
 
 ## React
 ### React - The Complete Guide
 #### Getting Started
 * [[Why Use React]]
+* [[Special Projects Folders]]
 #### JavaScript Refresher
 
 #### React Essentials - Components, JSX, Props, State & More
