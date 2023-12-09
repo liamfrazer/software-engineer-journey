@@ -2,21 +2,21 @@
 
 ## React
 ### React - The Complete Guide
-#### Section 1: Getting Started
+#### Getting Started
 * [[Why Use React]]
-#### Section 2: JavaScript Refresher
+#### JavaScript Refresher
 
-#### Section 3: React Essentials - Components, JSX, Props, State & More
+#### React Essentials - Components, JSX, Props, State & More
 
-#### Section 4: React Essentials - Deep Dive
+#### React Essentials - Deep Dive
 
-#### Section 5: React Essentials - Practice Project
+#### React Essentials - Practice Project
 
 ## Learning
 * [[Feynman Technique]]
 ### Ultralearning
 #### Principle 1 - Metalearning: First Draw a Map
-* [[Principle 1 - Metalearning]]
+* [[Metalearning]]
 #### Principle 2 - Focus: Sharpen Your Knife
 #### Principle 3 - Directness: Go Straight Ahead
 #### Principle 4 - Drill: Attack Your Weakest Point
