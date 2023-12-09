@@ -1,10 +1,4 @@
 ---
-course: reactthecompleteguide
-language: 
-application: 
-part: Section 1
-Page Link: 
-External Link: 
 tags:
   - Declarative
   - Imperative
