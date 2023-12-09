@@ -31,4 +31,11 @@ export default "adada";
 import apiKey from "./utils.js"
 ```
 
-* If you have named exports, especiall
+* If you have named exports, especially using multiple, you can import them by grouping them together within a JavaScript object
+```js
+import * as utils from "./utils.js"
+```
+* The `as` keyword can also assign an alias
+```js
+import { apiKey as utils } from "./utils.js";
+```
