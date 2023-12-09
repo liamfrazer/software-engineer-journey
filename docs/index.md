@@ -28,6 +28,7 @@
 
 #### Principle 4 - Drill: Attack Your Weakest Point
 * [[Drills and Cognitive Load]]
+* [[Direct then Drill Approach]]
 * 
 #### Principle 5 - Retrieval: Test to Learn
 #### Principle 6 - Feedback: Don't Dodge the Punches
