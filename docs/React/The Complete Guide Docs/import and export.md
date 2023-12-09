@@ -21,4 +21,14 @@ import { apiKey } from "./utils";
 * This will instead be handled by the build process behind the scenes
 
 * **For the import and export keywords to function, we must ensure to use the type `module`**
-* 
+
+* When adding the `default` keyword, I'm stating that the value provided should be the default item to be important
+* You can only have one `default` export per file
+```js
+export default "adada";
+```
+```js
+import apiKey from "./utils.js"
+```
+
+* If you have named exports, especiall
