@@ -8,6 +8,7 @@
 #### JavaScript Refresher
 * [[import and export]]
 * [[functions and parameters]]
+* [[objects and classes]]
 * 
 #### React Essentials - Components, JSX, Props, State & More
 
