@@ -24,6 +24,8 @@
 #### Principle 2 - Focus: Sharpen Your Knife
 #### Principle 3 - Directness: Go Straight Ahead
 * [[How to Learn Directly]]
+* [[Learn Straight From The Source]]
+* 
 
 #### Principle 4 - Drill: Attack Your Weakest Point
 #### Principle 5 - Retrieval: Test to Learn
