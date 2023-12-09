@@ -14,3 +14,5 @@ tags:
 
 * JavaScript is Imperative, you're defining the steps and how to get to the goal
 * You're not defining the goal itself
+![[Pasted image 20231209143307.png]]
+![[Pasted image 20231209143335.png]]
