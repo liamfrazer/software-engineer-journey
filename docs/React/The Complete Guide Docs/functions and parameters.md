@@ -5,6 +5,8 @@ tags:
   - parameters
   - return
   - values
+  - arrow
+  - parentheses
 ---
 # functions and parameters
 
@@ -60,4 +62,17 @@ console.log(combine(2, 3, 4)) // 1.5
 
 ## Arrow Functions
 * Arrow functions are very popular with anonymous functions, where the function does not need a name
-* 
+* When using arrow functions, you cannot use the function keyword and instead use the parameter list, an arrow and then the curly braces
+* The return keyword can still be used
+
+### Omitting parameter list parentheses
+* If your arrow functions take exactly one parameter, you may omit the wrapping parentheses
+```js
+userName => { ... }
+(userName) => { ... }
+```
+* If the function takes no parameters, parentheses must not be omitted.
+* If the function takes more than one parameter, you must also not omit parentheses
+
+### Omitting function body curly braces
+* If your arrow functio
