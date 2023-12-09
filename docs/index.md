@@ -7,6 +7,7 @@
 * [[Special Projects Folders]]
 #### JavaScript Refresher
 * [[import and export]]
+* [[functions and parameters]]
 * 
 #### React Essentials - Components, JSX, Props, State & More
 
