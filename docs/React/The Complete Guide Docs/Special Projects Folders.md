@@ -10,3 +10,6 @@ tags:
 * Code that runs in the browser (JavaScript code, without JSX)
 * The transformation is handled by tools such as CRA & Vite, why we require things such as a build tool
 
+* The code you write is not the code that gets executed in the browser
+* Your code is transformed before it's handed off to the browser
+
