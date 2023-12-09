@@ -7,6 +7,8 @@ tags:
   - values
   - arrow
   - parentheses
+  - statement
+  - objects
 ---
 # functions and parameters
 
@@ -75,4 +77,21 @@ userName => { ... }
 * If the function takes more than one parameter, you must also not omit parentheses
 
 ### Omitting function body curly braces
-* If your arrow functio
+* If your arrow function contains no other logic, but a `return` statement, you may omit the curly braces and the `return` keyword
+```js
+number => {
+	return number * 3;
+}
+
+number => number * 3;
+```
+
+### Special case: Just returning an object
+* If you use the shorter alternative ` number => number * 3`  and you're attempting to return a JavaScript object, you may end up with invalid code.
+* JavaScript treats the curly braces as `function body wrappers`
+* To tell JavaScript that an object should be created (and returned) instead, the code would need to be adjusted
+```js
+number => ({ age: number}) // wrapping the object in extra parentheses
+```
+* By wrapping the object and its curly braces with an extra pair of parentheses, JavaScript understands that the curly braces are not there to define a `function body` but instead to create an object, now an object then gets returned.
+
