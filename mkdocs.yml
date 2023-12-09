@@ -1,60 +1,69 @@
-site_name: obsidian-mkdocs template
+site_name: Software Engineer Journey
+site_description: Documenting my Software Engineer Journey
+site_author: Liam
+site_url: https://liamfrazer.github.io/software-engineer-journey/
 
 theme:
-    name: 'material'
+    name: "material"
     palette:
+        # Light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          primary: pink
+          accent: indigo
+          toggle:
+              icon: material/toggle-switch-off-outline
+              name: Switch to dark mode
 
-    # Light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: pink
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-
-    # Dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: pink
-      accent: blue
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
+        # Dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: pink
+          accent: blue
+          toggle:
+              icon: material/toggle-switch
+              name: Switch to light mode
 
 # Extensions
 markdown_extensions:
-  - footnotes
-  # - attr_list
-  - pymdownx.arithmatex:
-      generic: true
-  # - pymdownx.superfences
-  # - pymdownx.details
-  # - pymdownx.magiclink
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - def_list
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+    - footnotes
+    # - attr_list
+    - pymdownx.arithmatex:
+          generic: true
+    # - pymdownx.superfences
+    # - pymdownx.details
+    # - pymdownx.magiclink
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - def_list
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
+    - pymdownx.superfences:
+          custom_fences:
+              - name: mermaid
+                class: mermaid
+                format: !!python/name:pymdownx.superfences.fence_code_format
 
-  - toc:
-      permalink: true
+    - toc:
+          permalink: true
 
 plugins:
-  - search
-  - roamlinks 
-
+    - search
+    - roamlinks
 
 extra_javascript:
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://unpkg.com/mermaid/dist/mermaid.min.js 
+    - javascripts/mathjax.js
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    - https://unpkg.com/mermaid/dist/mermaid.min.js
+
+extra:
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/liamfrazer
+
+repo_name: liamfrazer/software-engineer-journey
+repo_url: https://github.com/liamfrazer/software-engineer-journey
