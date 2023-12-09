@@ -23,6 +23,8 @@
 * [[Metalearning]]
 #### Principle 2 - Focus: Sharpen Your Knife
 #### Principle 3 - Directness: Go Straight Ahead
+* [[How to Learn Directly]]
+
 #### Principle 4 - Drill: Attack Your Weakest Point
 #### Principle 5 - Retrieval: Test to Learn
 #### Principle 6 - Feedback: Don't Dodge the Punches
