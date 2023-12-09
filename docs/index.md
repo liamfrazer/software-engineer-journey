@@ -1,8 +1,8 @@
 # Software Engineer Journey
 
 ## React
-* [[React - The Complete Guide index]]
+* [[React]]
 
 ## Ultralearning
-* [[Ultralearning index]]
+* [[Learning]]
 
