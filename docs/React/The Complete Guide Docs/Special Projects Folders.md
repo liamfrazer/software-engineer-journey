@@ -13,3 +13,11 @@ tags:
 * The code you write is not the code that gets executed in the browser
 * Your code is transformed before it's handed off to the browser
 
+* Raw, unprocessed React code won't execute in the browser, as React uses JSX
+* JSX is not a default JavaScript feature
+
+* The code would not be optimised for production(e.g. not minified)
+* React projects require a build process that transforms your code
+
+
+
