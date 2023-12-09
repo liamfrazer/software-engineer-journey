@@ -29,4 +29,18 @@ tags:
 * Boolean
 * true or false
 * A simple "yes" or "no" value type
-* Typically used in co
+* Typically used in conditions
+```js
+true
+false
+```
+
+* Null or undefined
+* "There is no value"
+* undefined: Default if no value was assigned yet
+* null: Explicitly assigned by the developer (reset value)
+
+* Variables are data containers
+* Variables store a value and can be used as often and in as many places as needed
+* 
+
