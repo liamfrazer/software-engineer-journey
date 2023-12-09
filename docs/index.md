@@ -6,7 +6,8 @@
 * [[Why Use React]]
 * [[Special Projects Folders]]
 #### JavaScript Refresher
-
+* [[import and export]]
+* 
 #### React Essentials - Components, JSX, Props, State & More
 
 #### React Essentials - Deep Dive
