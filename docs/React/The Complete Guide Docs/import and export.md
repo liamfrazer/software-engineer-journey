@@ -3,6 +3,8 @@ tags:
   - import
   - export
   - javascript
+  - from
+  - as
 ---
 # import and export
 
