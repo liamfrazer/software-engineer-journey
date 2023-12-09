@@ -6,6 +6,14 @@ site_url: https://liamfrazer.github.io/software-engineer-journey/
 theme:
     name: "material"
     palette:
+    features:
+      - navigation.footer
+      - navigation.instant
+      - navigation.top
+      - content.code.annotate
+      - search.suggest
+      - search.highlight
+
         # Light mode
         - media: "(prefers-color-scheme: light)"
           scheme: default
