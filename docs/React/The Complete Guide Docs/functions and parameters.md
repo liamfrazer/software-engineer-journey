@@ -3,6 +3,8 @@ tags:
   - javascript
   - function
   - parameters
+  - return
+  - values
 ---
 # functions and parameters
 
@@ -31,3 +33,19 @@ greet("Frazer", "Hello")
 
 * You can assign default values to parameters, by adding a `=` sign
 * The default value can be overridden, by simply providing a value
+```js
+function greet(userName, message = "Hello") {
+  console.log(`${message} ${userName}`);
+}
+
+greet("Liam", "Hi"); // Hi Liam
+greet("Frazer") // Hello Frazer
+```
+
+* Functions can also return values, by using the `return` keyword
+* Functions must only have one return statement at most.
+* Functions without `return` implicitly return `undefined`
+
+* Whenever you create functions, you should describe what's inside of it, or what it does
+* Functions can also be used for producing and returning values
+* They should be named to ensure it's very clear what a function does
