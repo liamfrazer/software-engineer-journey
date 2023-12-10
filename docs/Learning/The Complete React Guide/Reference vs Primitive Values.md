@@ -21,3 +21,13 @@ tags:
 
 * This also is the reason why we can use `const` on an array, meaning the value can't be edited.
 * Objects can be stored in a constant,
+
+```js
+let userMessage = "Hello" // Primitive
+userMessage = "Hello there" // Brand new string / Old string thrown away
+
+const hobbies = ["Fishing", "Sports", "Cooking"];
+hobbies.push("Hiking");
+console.log(hobbies)
+```
+
