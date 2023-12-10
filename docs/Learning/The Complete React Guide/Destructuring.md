@@ -2,6 +2,8 @@
 tags:
   - destructure
   - destructuring
+  - arrays
+  - objects
 ---
 # Destructuring
 
@@ -19,4 +21,15 @@ console.log(firstName, lastName)
 ```
 
 * The destructuring syntax also exists for objects, it doesn't just exist for arrays.
-* 
+
+```js
+const { name, age } = { name: "Liam", age: 25 };
+console.log(name, age); // Liam 25
+```
+* On the right side, this will create an object
+* On the left side, this will destructure an object.
+* We have to use the field names that are defined in the object, whereas arrays are pulled out by position.
+
+* An alias can also be defined when destructuring the object
+
+
