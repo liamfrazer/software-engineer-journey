@@ -29,5 +29,17 @@ const index = hobbies.findIndex((hobby) => {
 const index = hobbies.findIndex((hobby) => hobby === "Sports");
 ```
 * This is the shortest possible way of writing the arrow function
-* We're defining a function, that takes an input called 
+* We're defining a function, that takes an input called `hobby`, then compares that input to other values to yield true or false
+
+* `array.map()` allows you to transform all the items in an array to another item.
+* Map will not add it to the original array, instead it return a new array,
+
+```js
+const editedHobby = hobbies.map((hobby) => hobby + "!")
+console.log(hobbies) // ["Fishing"]
+console.log(editedHobby) // ["Fishing!"]
+```
+
+* array.map() doesn't have to return another array, they could also be converted to JS objects
+
 
