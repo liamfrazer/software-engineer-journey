@@ -1,21 +1,5 @@
 # Home
 
-## React
-### React - The Complete Guide
-#### Getting Started
-* [[Why Use React]]
-* [[Special Projects Folders]]
-#### JavaScript Refresher
-* [[import and export]]
-* [[functions and parameters]]
-* [[objects and classes]]
-* 
-#### React Essentials - Components, JSX, Props, State & More
-
-#### React Essentials - Deep Dive
-
-#### React Essentials - Practice Project
-
 ## Learning
 * [[Feynman Technique]]
 ### Ultralearning
@@ -34,9 +18,24 @@
 #### Principle 5 - Retrieval: Test to Learn
 * [[How to Practice retrieval]]
 * [[What should be Retrieved]]
-* 
 #### Principle 6 - Feedback: Don't Dodge the Punches
 #### Principle 7 - Retention: Don't Fill a Leaky Bucket
 #### Principle 8 - Intuition: Dig Deep before Building Up
 #### Principle 9 - Experimentation: Explore Outside Your Comfort Zone
+
+### The Complete React Guide
+#### Getting Started
+* [[Why Use React]]
+* [[Special Projects Folders]]
+#### JavaScript Refresher
+* [[import and export]]
+* [[functions and parameters]]
+* [[objects and classes]]
+* [[array and array methods]]
+* 
+#### React Essentials - Components, JSX, Props, State & More
+
+#### React Essentials - Deep Dive
+
+#### React Essentials - Practice Project
 
