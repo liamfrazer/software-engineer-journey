@@ -36,6 +36,7 @@
 * [[The Spread Operator]]
 * [[Control Structures]]
 * [[Using Functions as Values]]
+* [[Defining Functions Inside of Functions]]
 * 
 #### React Essentials - Components, JSX, Props, State & More
 

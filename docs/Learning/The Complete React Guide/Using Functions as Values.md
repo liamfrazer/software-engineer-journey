@@ -27,3 +27,13 @@ setTimeout(handleTimeout(), 5000) // 5 second delay to console log
 * An anonymous function can also be passed in advance, and then any code could then be executed within that anonymous arrow function
 * When defining an anonymous function, you're also not executing that function, you're just defining it, then passing the defined function to the first function
 
+```js
+function greeter(greetFn) {
+  greetFn();
+}
+
+greeter(() => console.log("Hello"))
+```
+* This function is getting executed, as we're passing it as a parameter for the greeter function.
+* Inside the greet function, we're then executing the greetFn function.
+* Passing functions as values is not limited to built in functions, but can be done with all functions.
