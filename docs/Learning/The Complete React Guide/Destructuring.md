@@ -49,7 +49,9 @@ console.log(storeOrder(({ id: 1, currency: "USD" })))
 console.log(localStorage)
 ```
 
-* Instead of accessing the order properties via the `dot notation` inside the s
+* Instead of accessing the order properties via the `dot notation` inside the storeOrder function body, you could use the destructuring code above.
+* Instead `id` and `currency` are pulled out of the incoming object.
+* storeOrder still only takes one parameter, it does not accept two parameters. Instead, it's one single parameter, an object which then just is destructured internally.
 
 
 
