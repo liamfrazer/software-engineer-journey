@@ -15,5 +15,19 @@ tags:
 
 * `array.push()` can be used to add another item to the array
 * `array.findIndex()` allows you to find the index of a certain value, this will take a function as an input, this should accept at least one input parameter
-* 
+```js
+const hobbies = ["Fishing", "Sports", "Cooking"];
+
+const index = hobbies.findIndex((hobby) => {
+  return hobby === "Sports"
+}); // 1
+```
+
+* The above arrow function can be shortened down even further
+
+```js
+const index = hobbies.findIndex((hobby) => hobby === "Sports");
+```
+* This is the shortest possible way of writing the arrow function
+* We're defining a function, that takes an input called 
 
