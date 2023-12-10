@@ -13,4 +13,8 @@ tags:
 
 ## Tactic 2: Free Recall
 * A simple tactic for applying retrieval is, after reading a section from a book or sitting in a lecture, to try and write down everything you can remember on a blank piece of paper.
-* 
+* By forcing yourself to recall the main points and arguments, you'll be able to remember them better later.
+
+## Tactic 4: Closed Book Learning
+* For a programmer, it's not enough to know what an algorithm means, but to be able to write it in code.
+* As you go through passive material, you can create challenges for yourself to go through later.
