@@ -47,3 +47,10 @@ console.log(hobbies) // ["Fishing"]
 console.log(editedHobby) // [ {…}, {…}, {…} ]
 ```
 
+```js
+function transformToObjects(numberArray) {
+  return numberArray.map((number) => ({ val: number }))
+}
+
+console.log(transformToObjects([1, 2, 3])) // 0: Object { val: 1 } 1: Object { val: 2 } 2: Object { val: 3 }
+```
