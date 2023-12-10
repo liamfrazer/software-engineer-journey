@@ -32,6 +32,7 @@
 * [[functions and parameters]]
 * [[objects and classes]]
 * [[array and array methods]]
+* [[Destructuring]]
 * 
 #### React Essentials - Components, JSX, Props, State & More
 
