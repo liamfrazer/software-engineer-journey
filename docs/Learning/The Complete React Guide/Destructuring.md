@@ -4,6 +4,7 @@ tags:
   - destructuring
   - arrays
   - objects
+  - function-parameter
 ---
 # Destructuring
 
@@ -31,5 +32,24 @@ console.log(name, age); // Liam 25
 * We have to use the field names that are defined in the object, whereas arrays are pulled out by position.
 
 * An alias can also be defined when destructuring the object
+
+```js
+const { name: userName, age } = { name: "Liam", age: 25 };
+console.log(userName, age); // Liam 25
+```
+
+* The destructuring syntax can also be used in `function parameter lists`
+```js
+function storeOrder({ id, currency }) {
+  localStorage.setItem('id', id);
+  localStorage.setItem('currency', currency);
+}
+
+console.log(storeOrder(({ id: 1, currency: "USD" })))
+console.log(localStorage)
+```
+
+* Instead of accessing the order properties via the `dot notation` inside the s
+
 
 
