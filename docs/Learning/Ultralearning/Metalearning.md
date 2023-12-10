@@ -50,5 +50,3 @@
 Both metalearning and ultralearning emphasize active learning, deliberate practice, and continuous improvement. Regularly applying what you've learned through practice and projects will solidify your understanding of JavaScript and React.
 
 
-
-* 
