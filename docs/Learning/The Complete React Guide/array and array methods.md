@@ -41,5 +41,9 @@ console.log(editedHobby) // ["Fishing!"]
 ```
 
 * array.map() doesn't have to return another array, they could also be converted to JS objects
-
+```js
+const editedHobby = hobbies.map((hobby) => ({ text: hobby }))
+console.log(hobbies) // ["Fishing"]
+console.log(editedHobby) // [ {…}, {…}, {…} ]
+```
 
