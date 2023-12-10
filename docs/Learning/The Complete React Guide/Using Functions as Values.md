@@ -37,3 +37,15 @@ greeter(() => console.log("Hello"))
 * This function is getting executed, as we're passing it as a parameter for the greeter function.
 * Inside the greet function, we're then executing the greetFn function.
 * Passing functions as values is not limited to built in functions, but can be done with all functions.
+
+
+* Here's a comparison:
+
+|Aspect|Function Expression|Function Declaration|
+|---|---|---|
+|Syntax|Assigned to a variable|Standalone statement|
+|Hoisting|Not hoisted|Hoisted to the top of scope|
+|Named or Anonymous|Can be named or anonymous|Must have a name|
+|Usage|Often used as a variable value|Used as standalone function|
+
+* Both function expressions and function declarations have their use cases. Function expressions offer more flexibility and can be more versatile in certain scenarios, especially when creating functions dynamically or as values assigned to variables. Function declarations, on the other hand, are standalone and provide a cleaner syntax for defining functions directly.
