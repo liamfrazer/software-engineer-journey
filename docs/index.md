@@ -35,6 +35,7 @@
 * [[Destructuring]]
 * [[The Spread Operator]]
 * [[Control Structures]]
+* [[Using Functions as Values]]
 * 
 #### React Essentials - Components, JSX, Props, State & More
 
