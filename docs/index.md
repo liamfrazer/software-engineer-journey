@@ -34,6 +34,7 @@
 * [[array and array methods]]
 * [[Destructuring]]
 * [[The Spread Operator]]
+* [[Control Structures]]
 * 
 #### React Essentials - Components, JSX, Props, State & More
 
