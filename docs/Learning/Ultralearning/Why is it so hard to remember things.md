@@ -13,4 +13,8 @@ tags:
 
 ## Mechanism 1 - Spacing: Repeat to Remember
 * Don't cram. Spreading learning sessions over more intervals over longer periods of time tend to perform much better in the long run.
+* Many ultralearners apply what are known as SRS tools to retain the most knowledge with the least effort.
+* Semi-regular do fresher projects. Scheduling this kind of maintenance in advance can be helpful, teaches that learning isn't just done once and continues for life.
+
+## Mechanism 2 - Proceduralization: Automatic will endure
 * 
