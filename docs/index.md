@@ -1,21 +1,5 @@
 # Home
 
-## React
-### React - The Complete Guide
-#### Getting Started
-* [[Why Use React]]
-* [[Special Projects Folders]]
-#### JavaScript Refresher
-* [[import and export]]
-* [[functions and parameters]]
-* [[objects and classes]]
-* 
-#### React Essentials - Components, JSX, Props, State & More
-
-#### React Essentials - Deep Dive
-
-#### React Essentials - Practice Project
-
 ## Learning
 * [[Feynman Technique]]
 ### Ultralearning
@@ -39,4 +23,26 @@
 * 
 #### Principle 8 - Intuition: Dig Deep before Building Up
 #### Principle 9 - Experimentation: Explore Outside Your Comfort Zone
+
+### The Complete React Guide
+#### Getting Started
+* [[Why Use React]]
+* [[Special Projects Folders]]
+#### JavaScript Refresher
+* [[import and export]]
+* [[functions and parameters]]
+* [[objects and classes]]
+* [[array and array methods]]
+* [[Destructuring]]
+* [[The Spread Operator]]
+* [[Control Structures]]
+* [[Using Functions as Values]]
+* [[Defining Functions Inside of Functions]]
+* [[Reference vs Primitive Values]]
+* 
+#### React Essentials - Components, JSX, Props, State & More
+
+#### React Essentials - Deep Dive
+
+#### React Essentials - Practice Project
 
