@@ -20,3 +20,8 @@ tags:
 
 ## Rule 3: Always start with a Concrete Example
 *  This process of following along with one's own example forces a deeper level of processing the material as it is being presented.
+* Using feedback rich processes to test whether or not he knew something was a trademark to Feynman
+
+## Rule 4: Don't Fool Yourself
+* Explaining things clearly and asking dumb questions can keep you from fooling yourself into thinking you know something when you don't.
+
