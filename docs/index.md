@@ -21,8 +21,9 @@
 #### Principle 6 - Feedback: Don't Dodge the Punches
 #### Principle 7 - Retention: Don't Fill a Leaky Bucket
 * [[Why is it so hard to remember things]]
-* 
 #### Principle 8 - Intuition: Dig Deep before Building Up
+* [[How to Build Your Intuition]]
+
 #### Principle 9 - Experimentation: Explore Outside Your Comfort Zone
 
 ### The Complete React Guide

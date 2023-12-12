@@ -19,4 +19,3 @@ tags:
 ## Mechanism 3- Overlearning: Practice Beyond Perfect
 * Can recall programming from the MI challenges, because they happened to be patterns that were repeated far more than was necessary to perform them adequately at the time > Because they were components of a much larger problem
 * This suggests that moving up a level to a more advanced skill enabled the earlier skill to be overlearned, thus preventing some forgetting.
-* 
