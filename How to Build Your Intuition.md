@@ -10,3 +10,6 @@ tags:
 
 * This approach is more succesfull in solving problems, because it gets to the core of how the problem works. The surface features of the problem don't always relate to the correct procedures needed to solve it.
 * Only by developing enough experience with problem solving can you build up a deep mental model of how other problems work.
+
+## Rule 1: Don't give up on a hard problem
+* when you feel like giving up and that you can't possibly figure out 
