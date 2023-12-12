@@ -16,5 +16,5 @@ tags:
 * Many ultralearners apply what are known as SRS tools to retain the most knowledge with the least effort.
 * Semi-regular do fresher projects. Scheduling this kind of maintenance in advance can be helpful, teaches that learning isn't just done once and continues for life.
 
-## Mechanism 2 - Proceduralization: Automatic will endure
-* 
+## Mechanism 3- Overlearning: Practice Beyond Perfect
+* Can recall programming from the MI challenges, because they happened to 
