@@ -17,4 +17,6 @@ tags:
 ## Rule 2: Prove things to understand them
 * Feynman didn't master things by following along with other people's results. Instead, it was the process of mentally trying to re-create those results that became so good.
 * His drive to understand things by virtue of working through the results himself also assisted in building his capacity for deep intuition.
-* 
+
+## Rule 3: Always start with a Concrete Example
+*  This process of following along with one's own example forces a deeper level of processing the material as it is being presented.
