@@ -26,6 +26,7 @@
 * [[The Feynman Technique]]
 #### Principle 9 - Experimentation: Explore Outside Your Comfort Zone
 * [[Experimentation is Key to Mastery]]
+* [[The Mindset of Experimentation]]
 * 
 
 ### The Complete React Guide

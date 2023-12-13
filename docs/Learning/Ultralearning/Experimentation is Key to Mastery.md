@@ -10,4 +10,3 @@ tags:
 
 * The difference between a novice programmer and a master isn't usually that the novice cannot solve certain problems. Rather, it's the master knows the best way to solve the problem, which will be the mose efficient and clean and cause the fewest headaches later on.
 * Experimentation becomes synonymous with learning as you force yourself to go outside your comfort zone and try new things.
-* 
