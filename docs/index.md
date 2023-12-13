@@ -25,7 +25,8 @@
 * [[How to Build Your Intuition]]
 * [[The Feynman Technique]]
 #### Principle 9 - Experimentation: Explore Outside Your Comfort Zone
-* [[]]
+* [[Experimentation is Key to Mastery]]
+* 
 
 ### The Complete React Guide
 #### Getting Started
