@@ -15,4 +15,11 @@ tags:
 * Identify the things other people who have learnt the skill have done to learn it.
 
 * 4. Direct Practice Activities
-* 
+
+* 5. Backup materials and drills
+
+## Step 2. Schedule Your Time
+* Consistency breeds good habits, reducing the effort required to study.
+* Shorter, spaced time chunks are better for memory than crammed chunks are.
+* Take all this information and schedule it on your calendar.
+* If you're unwilling to put time in your calender, 
