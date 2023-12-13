@@ -22,4 +22,6 @@ tags:
 * Consistency breeds good habits, reducing the effort required to study.
 * Shorter, spaced time chunks are better for memory than crammed chunks are.
 * Take all this information and schedule it on your calendar.
-* If you're unwilling to put time in your calender, 
+* If you're unwilling to put time in your calendar, you're almost certainly unwilling to put time in to study.
+
+## Step 3. Execute Your Plan
