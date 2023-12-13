@@ -23,4 +23,3 @@ tags:
 * Summarising may skip out the core difficulties of the problem.
 * Going deeper may take time, but it can help you get a strong grasp over a new method in one go.
 ### Application 3: For Expanding Your Intuition
-* 

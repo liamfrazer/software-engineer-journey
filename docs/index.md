@@ -24,8 +24,8 @@
 #### Principle 8 - Intuition: Dig Deep before Building Up
 * [[How to Build Your Intuition]]
 * [[The Feynman Technique]]
-* 
 #### Principle 9 - Experimentation: Explore Outside Your Comfort Zone
+* [[]]
 
 ### The Complete React Guide
 #### Getting Started
