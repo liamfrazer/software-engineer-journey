@@ -16,3 +16,11 @@ tags:
 * Using this technique will quickly reveal how much you really understand of your subject.
 *  Any gaps in your understanding will become clear as you struggle to explain key parts of the idea.
 
+### Application 1:  For things you don't understand at all
+* Easy method is with book in hand, go back and forth between your explanation and the one in the book.
+### Application 2: For Problems You Can't Seem to Solve
+* It's very important to go through the problem step by step rather than simply summarising it.
+* Summarising may skip out the core difficulties of the problem.
+* Going deeper may take time, but it can help you get a strong grasp over a new method in one go.
+### Application 3: For Expanding Your Intuition
+* 
