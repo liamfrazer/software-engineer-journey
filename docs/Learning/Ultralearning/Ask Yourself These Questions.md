@@ -10,4 +10,4 @@ tags:
 3. Have I spent 10% of my total time preparing the project?
 ## 2. Focus
 222
-
+250
