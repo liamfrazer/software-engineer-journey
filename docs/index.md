@@ -21,9 +21,15 @@
 #### Principle 6 - Feedback: Don't Dodge the Punches
 #### Principle 7 - Retention: Don't Fill a Leaky Bucket
 * [[Why is it so hard to remember things]]
-* 
 #### Principle 8 - Intuition: Dig Deep before Building Up
+* [[How to Build Your Intuition]]
+* [[The Feynman Technique]]
 #### Principle 9 - Experimentation: Explore Outside Your Comfort Zone
+* [[Experimentation is Key to Mastery]]
+* [[The Mindset of Experimentation]]
+#### [[Your First UltraLearning Project]]
+* [[Ask Yourself These Questions]]
+* 
 
 ### The Complete React Guide
 #### Getting Started
