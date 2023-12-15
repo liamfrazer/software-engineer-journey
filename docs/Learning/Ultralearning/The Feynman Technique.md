@@ -6,6 +6,15 @@ tags:
 # The Feynman Technique
 * The purpose of using this technique is to help develop intuition about the ideas you are learning.
 * It can be used when you don't understand an idea at all, or simply when you understand something a little, but really want to turn it into deep intuition.
+* Names do not constitute knowledge
+
+1. Write down the subject you want to study.
+2. Write down your explanation of the subject, as if writing it for a child
+3. Identify the gaps you have in the topic
+	1. Do you ramble?
+	2. Can you not use simple language?
+	3. Strengthen your weak areas
+4. Repeat Step 1-3 until you've mastered the subject
 
 ## 1.  Write down the concept or problem you want to understand at the top of a piece of paper.
 ## 2. In the space below, explain the idea as if you had to teach it to someone else.
@@ -23,3 +32,6 @@ tags:
 * Summarising may skip out the core difficulties of the problem.
 * Going deeper may take time, but it can help you get a strong grasp over a new method in one go.
 ### Application 3: For Expanding Your Intuition
+
+
+
