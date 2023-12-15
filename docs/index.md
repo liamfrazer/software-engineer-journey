@@ -45,7 +45,6 @@
 * [[Using Functions as Values]]
 * [[Defining Functions Inside of Functions]]
 * [[Reference vs Primitive Values]]
-* 
 #### React Essentials - Components, JSX, Props, State & More
 
 #### React Essentials - Deep Dive
