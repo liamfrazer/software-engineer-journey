@@ -37,3 +37,12 @@ tags:
 	* In most cases, return JSX, but allowed to return string, number, boolean, null, arrays
 
 
+* Use the format document command/shortcut in VS code to auto-format your code.
+* This does not just improve readability, but also adds the required wrapping parentheses.
+
+
+* React component functions can be used like regular HTML
+* 
+
+
+
