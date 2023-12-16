@@ -4,6 +4,7 @@ tags:
   - components
   - props
   - reusable
+  - destructuring
 ---
 # Making Components reusable with props
 
@@ -101,3 +102,21 @@ export default App;
 * The alternative is fine, but you may want to go with a shorter alternative
 
 * Within the parameter list, we can use object destructuring 
+* When using destructuring, JavaScript will match the properties coming out of the object as standalone variables within the function.
+* Object destructuring can be used with either longhand or shorthand objects on the component itself.
+
+```jsx
+function CoreConcept({ image, title, description }) {
+	return (
+		<li>
+			<img src={image} alt={title} />
+			<h3>{title}</h3>
+			<p>{description}</p>
+		</li>
+	);
+}
+```
+
+### Default prop values
+* Sometimes, you'll build components that may receive an optional prop.
+* For example, a custom `button` component may receive a `type` prop.
