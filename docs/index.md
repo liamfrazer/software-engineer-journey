@@ -49,6 +49,8 @@
 ##### Components
 * [[Creating Components]]
 * [[Outputting Dynamic Content in JSX]]
+* [[Setting HTML and Loading Images]]
+* 
 
 #### React Essentials - Deep Dive
 
