@@ -50,6 +50,7 @@
 * [[Creating Components]]
 * [[Outputting Dynamic Content in JSX]]
 * [[Setting HTML and Loading Images]]
+* [[Making Components reusable with props]]
 * 
 
 #### React Essentials - Deep Dive
