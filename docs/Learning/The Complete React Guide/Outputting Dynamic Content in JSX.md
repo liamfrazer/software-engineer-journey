@@ -21,3 +21,23 @@ tags:
 
 * Expressions produce a value
 * Function statements do not produce a value
+
+* Keeping your JSX code lean is preferred, where you would keep function expressions out of JSX, but only refer to them as their const 
+
+
+```jsx
+	const description = getRandomValue(values);
+
+	return (
+		<header>
+			<img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
+			<h1>React Essentials</h1>
+			<p>
+				{description} React concepts you will need for almost any app
+				you are going to build!
+			</p>
+		</header>
+	);
+}
+```
+
