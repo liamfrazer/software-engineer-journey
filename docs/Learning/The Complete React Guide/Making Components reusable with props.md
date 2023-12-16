@@ -56,3 +56,19 @@ function CoreConcept(props) {
 
 ![[Pasted image 20231216104945.png]]
 
+* PropTypes
+
+```jsx
+import PropTypes from "prop-types";
+
+CoreConcept.propTypes = {
+	title: PropTypes.string,
+	description: PropTypes.string,
+	image: PropTypes.string,
+};
+
+
+```
+
+
+
