@@ -120,3 +120,19 @@ function CoreConcept({ image, title, description }) {
 ### Default prop values
 * Sometimes, you'll build components that may receive an optional prop.
 * For example, a custom `button` component may receive a `type` prop.
+* So the button component should be usable either with a type being set:
+```jsx
+<Button type="submit" caption="My Button" />
+```
+* Or Without
+```jsx
+<Button caption="My Button"
+```
+* To make this component work, you might want to set a default value for the type prop, in case it's not passed.
+* This can easily be achieved since JavaScript supports default values when using object destructuring:
+```jsx
+export default function Button({ caption, type = "submit"}) {
+//caption has no default value, type has a default value of "submit"
+}
+```
+
