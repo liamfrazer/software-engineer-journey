@@ -33,6 +33,7 @@ tags:
 	* Multi-word names should be written in PascalCase (e.g MyHeader)
 	* It's recommended to pick a name that describes the UI building block
 * Returns "Render able" Content
-	* The function must return a value that can be rendered ("displayed on screen") by Rea
+	* The function must return a value that can be rendered ("displayed on screen") by React
+	* In most cases, return JSX, but allowed to return string, number, boolean, null, arrays
 
 
