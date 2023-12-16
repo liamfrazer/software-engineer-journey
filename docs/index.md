@@ -48,7 +48,8 @@
 #### React Essentials - Components, JSX, Props, State & More
 ##### Components
 * [[Creating Components]]
-* 
+* [[Outputting Dynamic Content in JSX]]
+
 #### React Essentials - Deep Dive
 
 #### React Essentials - Practice Project

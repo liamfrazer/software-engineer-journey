@@ -42,7 +42,6 @@ tags:
 
 
 * React component functions can be used like regular HTML
-* 
 
 
 
