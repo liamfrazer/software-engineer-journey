@@ -46,7 +46,9 @@
 * [[Defining Functions Inside of Functions]]
 * [[Reference vs Primitive Values]]
 #### React Essentials - Components, JSX, Props, State & More
-
+##### Components
+* [[Creating Components]]
+* 
 #### React Essentials - Deep Dive
 
 #### React Essentials - Practice Project
