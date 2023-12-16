@@ -25,3 +25,34 @@ tags:
 	* Receives props with parameter with configuration data
 
 
+* You're not limited to values when passing props.
+* String/Number/Array/Object
+* props is the name typically chosen
+* Props will be set by React, as React will execute the function, we're using them as HTML elements
+
+
+```jsx
+						<CoreConcept
+							title="Components"
+							description="The Core UI building block."
+							image={componentsImg}
+						/>
+						<CoreConcept />
+						<CoreConcept />
+						<CoreConcept />
+```
+
+```jsx
+function CoreConcept(props) {
+	return (
+		<li>
+			<img src={props.image} alt={props.title} />
+			<h3>{props.title}</h3>
+			<p>{props.description}</p>
+		</li>
+	);
+}
+```
+
+![[Pasted image 20231216104945.png]]
+
