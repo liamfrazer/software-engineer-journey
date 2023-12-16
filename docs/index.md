@@ -51,6 +51,7 @@
 * [[Outputting Dynamic Content in JSX]]
 * [[Setting HTML and Loading Images]]
 * [[Making Components reusable with props]]
+* [[Storing Components and Good Project Structure]]
 * 
 
 #### React Essentials - Deep Dive
