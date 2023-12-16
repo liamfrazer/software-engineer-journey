@@ -70,5 +70,34 @@ CoreConcept.propTypes = {
 
 ```
 
+* Thanks to props, is that the component is re-usable
 
+* We can use a shorthand spread operator to pull out all the key value pairs of an object.
+* By using the spread operator, key value pairs of the object can be added as key value pairs to the component as props.
 
+```jsx
+function App() {
+	return (
+		<div>
+			<Header />
+			<main>
+				<section id="core-concepts">
+					<h2>Core Concepts</h2>
+					<ul>
+						<CoreConcept {...CORE_CONCEPTS[0]} />
+						<CoreConcept {...CORE_CONCEPTS[1]} />
+						<CoreConcept {...CORE_CONCEPTS[2]} />
+						<CoreConcept {...CORE_CONCEPTS[3]} />
+					</ul>
+				</section>
+			</main>
+		</div>
+	);
+}
+
+export default App;
+```
+
+* The alternative is fine, but you may want to go with a shorter alternative
+
+* Within the parameter list, we can use object destructuring 
