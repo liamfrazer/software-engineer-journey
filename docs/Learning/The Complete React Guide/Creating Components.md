@@ -17,3 +17,7 @@ tags:
 	* Different components handle different data & logic
 	* Vastly simplifies the process of working on complex apps
 
+
+## Describe the target UI with JSX
+* JavaSc
+
