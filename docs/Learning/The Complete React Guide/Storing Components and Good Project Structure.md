@@ -62,4 +62,5 @@ export default function CoreConcept({ image, title, description }) {
 
 * The CSS file should also be split across multiple files, stored next to their respective components and not in 1 large index.css
 * Importing a CSS file within a component will not scope these styles to that component.
+* If we would use a Header element elsewhere, those styles would also be applied elsewhere.
 
