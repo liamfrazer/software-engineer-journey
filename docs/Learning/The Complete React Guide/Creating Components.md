@@ -5,6 +5,7 @@ tags:
   - html
   - javascript
   - CSS
+  - Declarative
 ---
 # Creating Components
 * Reusable Building Blocks
@@ -19,5 +20,11 @@ tags:
 
 
 ## Describe the target UI with JSX
-* JavaSc
+* JavaScript Syntax Extension
+* Used to describe & create HTML elements in JavaScript in a declarative way.
+* With React, you write declarative code
+* You define the target HTML structure  & UI, not the steps to get there
+* Browsers do not support JSX
+* React projects come with a build process that transforms JSX
+
 
