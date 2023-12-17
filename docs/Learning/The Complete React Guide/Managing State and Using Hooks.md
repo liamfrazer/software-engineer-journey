@@ -43,5 +43,4 @@ import { useState } from "react";
 * In the example above, counter will be re-created each time the component function executes, this means that we're able to use a const
 
 * When you call `setSelectedTopic`, React schedules the state update and then re-executes the Component Function. Therefore, the updated value is only available once the Component Function has been re-rendered.
-* 
 
