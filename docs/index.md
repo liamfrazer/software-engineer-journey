@@ -57,7 +57,8 @@
 * [[Passing Functions as values to Props]]
 * [[Passing Custom Arguments to Event Functions]]
 * [[How Not to Update the UI]]
-* ]
+* [[Managing State and Using Hooks]]
+* 
 
 #### React Essentials - Deep Dive
 
