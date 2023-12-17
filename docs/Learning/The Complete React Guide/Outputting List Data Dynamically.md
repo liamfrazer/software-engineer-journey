@@ -14,4 +14,23 @@ tags:
 * You can also output an array of JSX elements
 * The map item can be used, as the function would now output an item for every item that exists within the array
 
-* 
+* In React, you will often lists of data and often create components from them.
+* Majority of the time you will require the map method to do this.
+
+* Each child in a list should have a unique key prop.
+* We're not using the key prop, as it will be used by React
+
+```jsx
+				<section id="core-concepts">
+					<h2>Core Concepts</h2>
+					<ul>
+						{CORE_CONCEPTS.map((conceptItem) => (
+							<CoreConcept
+								key={conceptItem.title}
+								{...conceptItem}
+							/>
+						))}
+					</ul>
+				</section>
+```
+
