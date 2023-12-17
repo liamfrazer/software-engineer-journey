@@ -59,3 +59,24 @@ TabButton.propTypes = {
 					</menu>
 ```
 
+```jsx
+import React from 'react';
+
+export default function App() {
+    
+    const [selected, setSelected] = React.useState();
+    
+    const handleClick = () => {
+        setSelected(true);
+    };
+    
+    
+    return (
+        <div>
+            <p className={selected ? 'active' : ''}>Style me!</p>
+            <button onClick={handleClick}>Toggle style</button>
+        </div>
+    );
+}
+```
+

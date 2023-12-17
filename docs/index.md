@@ -60,6 +60,7 @@
 * [[Deriving and Outputting Data Based on State]]
 * [[Rendering Content Conditionally]]
 * [[CSS Styling and Dynamic Styling]]
+* [[Outputting List Data Dynamically]]
 * 
 
 #### React Essentials - Deep Dive
