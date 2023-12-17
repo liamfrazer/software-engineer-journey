@@ -55,6 +55,7 @@
 * [[Component Composition - The Special Children Prop]]
 * [[Reacting to Events]]
 * [[Passing Functions as values to Props]]
+* [[Passing Custom Arguments to Event Functions]]
 * 
 
 #### React Essentials - Deep Dive
