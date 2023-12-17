@@ -58,6 +58,8 @@
 * [[How Not to Update the UI]]
 * [[Managing State and Using Hooks]]
 * [[Deriving and Outputting Data Based on State]]
+* [[Rendering Content Conditionally]]
+* 
 
 #### React Essentials - Deep Dive
 
