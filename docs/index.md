@@ -59,6 +59,7 @@
 * [[Managing State and Using Hooks]]
 * [[Deriving and Outputting Data Based on State]]
 * [[Rendering Content Conditionally]]
+* [[CSS Styling and Dynamic Styling]]
 * 
 
 #### React Essentials - Deep Dive

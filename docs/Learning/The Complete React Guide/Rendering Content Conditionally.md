@@ -66,3 +66,35 @@ tags:
 					{tabContent}
 ```
 
+
+
+```jsx
+import React from 'react';
+
+export default function App() {
+    
+    const [alert, setAlert] = React.useState();
+    
+    const handleClick = () => {
+        setAlert(!alert);
+    }
+    
+    let warning = <button onClick={handleClick}>Delete</button>;
+    
+    if (alert) {
+        warning = (
+            <div data-testid="alert" id="alert">
+            <h2>Are you sure?</h2>
+            <p>These changes can't be reverted!</p>
+            <button onClick={handleClick}>Proceed</button>
+        </div>
+        );
+    };
+    
+    return (
+      <div>
+        {warning}
+      </div>    
+    );
+}
+```
