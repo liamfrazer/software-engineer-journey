@@ -18,7 +18,7 @@ tags:
 
 
 * The above feature is called Component Composition
-* This approach depends on the exact usecase,
+* This approach depends on the exact use-case,
 * On our button approach, Component Composition works well
 * Both approaches work, but comes down to personal preference
 
@@ -29,4 +29,5 @@ tags:
 	* This approach makes sense if you got multiple smaller pieces of information that must be passed to a component.
 	* Adding extra props instead of just wrapping the content with the component tags mean extra work
 
-* Both options come down to use-case and pe
+* Both options come down to use-case and personal preferences
+* 
