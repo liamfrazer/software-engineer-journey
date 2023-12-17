@@ -21,5 +21,16 @@ import { useState } from "react";
 * Only call Hooks inside of Component Functions
 	* React Hooks must not be called outside of React component functions
 * Only call Hooks on the top level
-	* React Hooks must not be called in nested code statements (e.g inside of if-s)
+	* React Hooks must not be called in nested code statements (e.g inside of if-statements)
+
+* useState() is the most important function built into React
+* useState does accept an argument, which is the default value you want React to store/use
+
+
+* `useState()` contains an Array with two elements
+* It will always be two elements
+
+```jsx
+    const [selectedTopic, setSelectedTopic] = useState("Please click a button:");
+```
 
