@@ -52,6 +52,7 @@
 * [[Setting HTML and Loading Images]]
 * [[Making Components reusable with props]]
 * [[Storing Components and Good Project Structure]]
+* [[Component Composition - The Special Children Prop]]
 * 
 
 #### React Essentials - Deep Dive
