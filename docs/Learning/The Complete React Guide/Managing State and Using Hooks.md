@@ -34,3 +34,11 @@ import { useState } from "react";
     const [selectedTopic, setSelectedTopic] = useState("Please click a button:");
 ```
 
+![[Pasted image 20231217150957.png]]
+
+* Manage data & "tell" React to re-execute a component function via React's `useState()` Hook
+* State updates lead to new state values (as the component function executes again)
+
+* Calling the `setCounter` special function within the example above, will then allow the Component where the state is stored to be re-rendered
+* In the example above, counter will be re-created each time the component function executes, this means that we're able to use a const
+* 
