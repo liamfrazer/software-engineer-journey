@@ -29,4 +29,19 @@ tags:
 					)}
 ```
 
+* The `&&` value will output the condition that comes after it, if the condition in front of it is true.
 
+```jsx
+					{!selectedTopic && <p>Please select a topic.</p>}
+					{selectedTopic && (
+						<div id="tab-content">
+							<h3>{EXAMPLES[selectedTopic].title}</h3>
+							<p>{EXAMPLES[selectedTopic].description}</p>
+							<pre>
+								<code>{EXAMPLES[selectedTopic].code}</code>
+							</pre>
+						</div>
+					)}
+```
+
+* JSX code can be stored in variables and constants
