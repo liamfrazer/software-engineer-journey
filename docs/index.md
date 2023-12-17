@@ -56,7 +56,8 @@
 * [[Reacting to Events]]
 * [[Passing Functions as values to Props]]
 * [[Passing Custom Arguments to Event Functions]]
-* 
+* [[How Not to Update the UI]]
+* ]
 
 #### React Essentials - Deep Dive
 
