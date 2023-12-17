@@ -66,3 +66,5 @@ export default App;
 						</TabButton>
 ```
 
+* If you want to define a function that should be executed upon an event, but you also want to control how it's called and what arguments are passed through it
+* 
