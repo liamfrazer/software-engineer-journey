@@ -14,4 +14,25 @@ tags:
 
 * Muse use the name as the function, as we want to use the function as a value
 * This should not be executed with parenthesis
-* Using the Function as a value means that the function is executed by React when a click on the 
+* Using the Function as a value means that the function is executed by React when a click on the button occurs.
+
+```jsx
+import PropTypes from "prop-types";
+export default function TabButton({ children }) {
+	const handleClick = () => {
+		console.log(children);
+	};
+
+	return (
+		<li>
+			<button onClick={handleClick}>{children}</button>
+		</li>
+	);
+}
+
+TabButton.propTypes = {
+	children: PropTypes.any,
+};
+
+```
+

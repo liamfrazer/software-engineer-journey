@@ -54,6 +54,7 @@
 * [[Storing Components and Good Project Structure]]
 * [[Component Composition - The Special Children Prop]]
 * [[Reacting to Events]]
+* [[Passing Functions as values to Props]]
 * 
 
 #### React Essentials - Deep Dive
