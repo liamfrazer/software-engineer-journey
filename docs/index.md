@@ -4,6 +4,7 @@
 
 ### The Creative Act: A Way of Being
 * [[The Seed]]
+* [[Try Everything]]
 * 
 
 ### Ultralearning
