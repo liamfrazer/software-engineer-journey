@@ -2,6 +2,10 @@
 
 ## Books
 
+### The Creative Act: A Way of Being
+* [[The Seed]]
+* 
+
 ### Ultralearning
 #### Principle 1 - Metalearning: First Draw a Map
 * [[Metalearning]]
@@ -30,6 +34,8 @@
 #### [[Your First UltraLearning Project]]
 * [[Ask Yourself These Questions]]
 
+
+## Learning
 ### The Complete React Guide
 #### Getting Started
 * [[Why Use React]]

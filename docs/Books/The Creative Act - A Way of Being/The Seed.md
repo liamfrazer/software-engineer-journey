@@ -1,0 +1,4 @@
+---
+tags:
+---
+# The Seed
