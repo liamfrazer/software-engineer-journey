@@ -1,7 +1,7 @@
 # Home
 
-## Learning
-* [[Feynman Technique]]
+## Books
+
 ### Ultralearning
 #### Principle 1 - Metalearning: First Draw a Map
 * [[Metalearning]]
