@@ -64,3 +64,4 @@ export default function CoreConcept({ image, title, description }) {
 * Importing a CSS file within a component will not scope these styles to that component.
 * If we would use a Header element elsewhere, those styles would also be applied elsewhere.
 
+![[Pasted image 20231217110952.png]]

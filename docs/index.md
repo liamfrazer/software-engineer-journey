@@ -46,12 +46,21 @@
 * [[Defining Functions Inside of Functions]]
 * [[Reference vs Primitive Values]]
 #### React Essentials - Components, JSX, Props, State & More
-##### Components
 * [[Creating Components]]
 * [[Outputting Dynamic Content in JSX]]
 * [[Setting HTML and Loading Images]]
 * [[Making Components reusable with props]]
 * [[Storing Components and Good Project Structure]]
+* [[Component Composition - The Special Children Prop]]
+* [[Reacting to Events]]
+* [[Passing Functions as values to Props]]
+* [[Passing Custom Arguments to Event Functions]]
+* [[How Not to Update the UI]]
+* [[Managing State and Using Hooks]]
+* [[Deriving and Outputting Data Based on State]]
+* [[Rendering Content Conditionally]]
+* [[CSS Styling and Dynamic Styling]]
+* [[Outputting List Data Dynamically]]
 * 
 
 #### React Essentials - Deep Dive
