@@ -5,7 +5,6 @@
 ### The Creative Act: A Way of Being
 * [[The Seed]]
 * [[Try Everything]]
-* 
 
 ### Ultralearning
 #### Principle 1 - Metalearning: First Draw a Map
@@ -71,6 +70,7 @@
 
 #### React Essentials - Deep Dive
 * [[You Don't have to use JSX]]
+* [[Working with Fragments]]
 * 
 
 #### React Essentials - Practice Project
