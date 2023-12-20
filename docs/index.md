@@ -72,6 +72,7 @@
 * [[You Don't have to use JSX]]
 * [[Working with Fragments]]
 * [[Splitting Components by Feature and State]]
+* [[Props are not Forwarded to Inner Elements]]
 * 
 
 #### React Essentials - Practice Project
