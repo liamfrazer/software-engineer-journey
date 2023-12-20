@@ -68,9 +68,10 @@
 * [[Rendering Content Conditionally]]
 * [[CSS Styling and Dynamic Styling]]
 * [[Outputting List Data Dynamically]]
-* 
 
 #### React Essentials - Deep Dive
+* [[You Don't have to use JSX]]
+* 
 
 #### React Essentials - Practice Project
 
