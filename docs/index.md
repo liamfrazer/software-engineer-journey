@@ -71,6 +71,7 @@
 #### React Essentials - Deep Dive
 * [[You Don't have to use JSX]]
 * [[Working with Fragments]]
+* [[Splitting Components by Feature and State]]
 * 
 
 #### React Essentials - Practice Project
