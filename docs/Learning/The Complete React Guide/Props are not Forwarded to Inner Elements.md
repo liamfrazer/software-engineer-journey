@@ -4,6 +4,8 @@ tags:
   - props
   - forwarded
   - elements
+  - children
+  - proxy-props
 ---
 # Props are not Forwarded to Inner Elements
 
@@ -70,6 +72,8 @@ export default function Section({ title, children, id }) {
 ```
 ![[Pasted image 20231221153741.png]]
 
+* We can use a pattern called forwarded props or "proxy-props", and not have to destructure each prop that we're passing through to the element, as this would not be scalable.
 
+* 
 
 
