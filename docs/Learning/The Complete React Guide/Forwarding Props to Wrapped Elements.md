@@ -28,4 +28,19 @@ export default function Section({ title, children, ...props }) {
 
 * We merge any leftover props into the `props` object with `...props`
 * Then we can spread the remaining props with `button {...props}` onto the built in button
-* We just have to ensure,
+* We just have to ensure, in our example that we use the `onClick` prop that exists on the built in button
+
+```jsx
+				<TabButton
+					isSelected={selectedTopic === "components"}
+					onClick={() => handleSelect("components")}
+				>
+```
+```jsx
+		<li>
+			<button className={isSelected ? "active" : ""} {...props}>
+				{children}
+			</button>
+		</li>
+```
+
