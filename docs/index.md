@@ -74,6 +74,7 @@
 * [[Splitting Components by Feature and State]]
 * [[Props are not Forwarded to Inner Elements]]
 * [[Forwarding Props to Wrapped Elements]]
+* [[Working with Multiple JSX Slots]]
 * 
 
 #### React Essentials - Practice Project
