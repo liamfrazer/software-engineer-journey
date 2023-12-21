@@ -3,6 +3,7 @@ tags:
   - react
   - jsx
   - slots
+  - components
 ---
 # Working with Multiple JSX Slots
 
@@ -24,5 +25,59 @@ tags:
 * We want to have an additional slot for JSX code within the Tabs component
 
 * JSX elements are just regular values and can be used like values
-* 
+* Whenever you're using JSX code as a value, only one route element can be used
+
+* Being able to set multiple slots in components is a crucial concept within React.
+
+```jsx
+export default function Tabs({ children, buttons }) {
+	return (
+		<>
+			<menu>{buttons}</menu>
+			{children}
+		</>
+	);
+}
+
+```
+```jsx
+	return (
+		<Section title="Examples" id="examples">
+			<Tabs
+				buttons={
+					<>
+						<TabButton
+							isSelected={selectedTopic === "components"}
+							onClick={() => handleSelect("components")}
+						>
+							Components
+						</TabButton>
+						<TabButton
+							isSelected={selectedTopic === "jsx"}
+							onClick={() => handleSelect("jsx")}
+						>
+							JSX
+						</TabButton>
+						<TabButton
+							isSelected={selectedTopic === "props"}
+							onClick={() => handleSelect("props")}
+						>
+							Props
+						</TabButton>
+						<TabButton
+							isSelected={selectedTopic === "state"}
+							onClick={() => handleSelect("state")}
+						>
+							State
+						</TabButton>
+					</>
+				}
+			>
+				{tabContent}
+			</Tabs>
+		</Section>
+	);
+}
+
+```
 
