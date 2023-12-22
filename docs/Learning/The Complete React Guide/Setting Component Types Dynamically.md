@@ -21,4 +21,6 @@ export default function Tabs({ children, buttons }) {
 
 ```
 
-
+* We could use the identifier of a component as a value and pass this through as a prop, giving the developer more options/functionality to use the component in different ways
+* Custom components must be passed as a dynamic value `{Component}`
+* 
