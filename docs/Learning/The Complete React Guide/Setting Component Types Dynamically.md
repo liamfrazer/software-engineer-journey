@@ -42,3 +42,18 @@ export default function Tabs({ children, buttons, buttonsContainer }) {
 * React will use the value from `buttonsContainter`, React recognises that we're either using a custom component or built in component such as `menu`
 
 * We're now able to dynamically set the wrapper, but knowing about this pattern, passing a component identifier as a value for a prop, dynamically rendering different HTML elements
+
+```jsx
+const Tabs = ({ children, buttons, buttonsContainer }) => {
+	const ButtonsContainer = buttonsContainer;
+	return (
+		<>
+			<ButtonsContainer>{buttons}</ButtonsContainer>
+			{children}
+		</>
+	);
+};
+
+export default Tabs;
+```
+
