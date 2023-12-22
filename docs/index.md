@@ -77,7 +77,7 @@
 * [[Working with Multiple JSX Slots]]
 * [[Setting Component Types Dynamically]]
 * [[Default Prop Values]]
-* 
+* [[]]
 
 #### React Essentials - Practice Project
 
