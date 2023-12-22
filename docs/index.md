@@ -77,7 +77,8 @@
 * [[Working with Multiple JSX Slots]]
 * [[Setting Component Types Dynamically]]
 * [[Default Prop Values]]
-* [[]]
+* [[Building Blocks for Tic Tac Toe Project]]
+* 
 
 #### React Essentials - Practice Project
 
