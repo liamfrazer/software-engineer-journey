@@ -87,3 +87,8 @@ export default Player;
 * The `App` component, which is the parent component to `Player` will not be impacted by the state changes 
 * We can store JSX code as a value in variables, so `<span className="player-name">{name}</span>` is being stored in a variable.
 
+* Whenever you're reusing components, React creates an isolated instance. If the state changes in the first component, the second component is not impacted by this
+* We have a shared component with the same logic, but isolated instances are created
+
+* The edit button is then replaced with a ternary expression that checks on the isEditingState `{isEditing ? "Save" : "Edit"}`
+* 
