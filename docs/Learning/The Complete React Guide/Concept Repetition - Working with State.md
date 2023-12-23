@@ -83,4 +83,7 @@ export default Player;
 
 ## Course Edit
 * We're passing the `handleEditClick` function as a value and not calling the function right away.
-* Calling the `setIsEditing` function is changing a s
+* Calling the `setIsEditing` function is changing a state, which will cause React to re-execute the whole component and revaluate the JSX code
+* The `App` component, which is the parent component to `Player` will not be impacted by the state changes 
+* We can store JSX code as a value in variables, so `<span className="player-name">{name}</span>` is being stored in a variable.
+
