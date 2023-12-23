@@ -91,4 +91,36 @@ export default Player;
 * We have a shared component with the same logic, but isolated instances are created
 
 * The edit button is then replaced with a ternary expression that checks on the isEditingState `{isEditing ? "Save" : "Edit"}`
-* 
+
+```jsx
+import { useState } from "react";
+
+const Player = ({ name, symbol }) => {
+	const [isEditing, setIsEditing] = useState(false);
+
+	const handleEditClick = () => {
+		setIsEditing(!isEditing);
+	};
+
+	let playerName = <span className="player-name">{name}</span>;
+
+	if (isEditing) {
+		playerName = <input type="text" value={name} required />;
+	}
+
+	return (
+		<li>
+			<span className="player">
+				{playerName}
+				<span className="player-symbol">{symbol}</span>
+			</span>
+			<button onClick={handleEditClick}>
+				{isEditing ? "Save" : "Edit"}
+			</button>
+		</li>
+	);
+};
+
+export default Player;
+
+```

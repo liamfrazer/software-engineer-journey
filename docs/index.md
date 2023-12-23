@@ -79,6 +79,7 @@
 * [[Default Prop Values]]
 * [[Building Blocks for Tic Tac Toe Project]]
 * [[Concept Repetition - Working with State]]
+* [[Updating State Based on Old State Correctly]]
 * 
 
 #### React Essentials - Practice Project
