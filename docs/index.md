@@ -78,6 +78,7 @@
 * [[Setting Component Types Dynamically]]
 * [[Default Prop Values]]
 * [[Building Blocks for Tic Tac Toe Project]]
+* [[Concept Repetition - Working with State]]
 * 
 
 #### React Essentials - Practice Project
