@@ -81,6 +81,7 @@
 * [[Concept Repetition - Working with State]]
 * [[Updating State Based on Old State Correctly]]
 * [[User Input and Two Way Binding]]
+* [[Rendering Multi-dimensional Lists]]
 * 
 
 #### React Essentials - Practice Project
