@@ -40,4 +40,18 @@ updatedUser.name = "Liam"  Creating a copy via JavaScript's "Spread" operator
 
 * If we followed the code above, we would be updating the object in memory, even before the state had been changed by React
 * This can lead to strange bugs or side effects when multiple places schedule state updates for the same state
-* 
+
+
+```jsx
+	const handleSelectSquare = (rowIndex, colIndex) => {
+		setGameBoard((prevGameBoard) => {
+			const updatedBoard = [
+				...prevGameBoard.map((innerArray) => [...innerArray]),
+			];
+			updatedBoard[rowIndex][colIndex] = "X";
+			return updatedBoard;
+		});
+	};
+```
+
+
