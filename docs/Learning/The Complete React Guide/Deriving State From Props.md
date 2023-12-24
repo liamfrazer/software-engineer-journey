@@ -12,4 +12,18 @@ tags:
 * `gameBoard` is a computed value that is derived from the `gameTurns` state
 * You should manage as little state as needed and derive as much as possible.
 
-* 
+```jsx
+const GameBoard = ({ onSelectSquare, turns }) => {
+	let gameBoard = initialGameBoard;
+
+	for (const turn of turns) {
+		const { square, player } = turn;
+		const { row, col } = square;
+
+		gameBoard[row][col] = player;
+	}
+```
+
+```jsx
+<GameBoard onSelectSquare={handleSelectSquare} turns={gameTurns} />
+```

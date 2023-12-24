@@ -86,6 +86,7 @@
 * [[Lifting State Up]]
 * [[Avoid Intersection States]]
 * [[Deriving State From Props]]
+* [[Sharing State Across Components]]
 * 
 
 #### React Essentials - Practice Project
