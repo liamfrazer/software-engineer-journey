@@ -12,4 +12,23 @@ tags:
 
 
 * We want to update the new turns, in front of the old turns, so that the first item in the array is the latest turn.
-* We also want to e
+* We also want to ensure that when setting the `setGameTurns` state, that we're doing this correctly with the arrow function.
+
+```jsx
+	const handleSelectSquare = (rowIndex, colIndex) => {
+		setActivePlayer((currentPlayer) => (currentPlayer === "X" ? "0" : "X"));
+		setGameTurns((prevTurns) => {
+			let currentPlayer = "X";
+			if (prevTurns.length > 0 && prevTurns[0].player === "X") {
+				currentPlayer = "0";
+			}
+			const updatedTurns = [
+				{ square: { rowIndex, colIndex }, player: currentPlayer },
+				...prevTurns,
+			];
+
+			return updatedTurns;
+		});
+	};
+```
+* The above updateState function is ensuring that we're upda
