@@ -83,6 +83,7 @@
 * [[User Input and Two Way Binding]]
 * [[Rendering Multi-dimensional Lists]]
 * [[Updating Object State Immutably]]
+* [[Lifting State Up]]
 * 
 
 #### React Essentials - Practice Project
