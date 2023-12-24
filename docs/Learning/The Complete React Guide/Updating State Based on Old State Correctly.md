@@ -17,4 +17,5 @@ tags:
 ## React is scheduling State Updates
 * State updates are not performed instantly but at some point in the future, when React has time for it
 * In most cases, those state updates are still executed almost instantly
+* By adding a function, you're guaranteed by React to always be working with the latest state update
 * 

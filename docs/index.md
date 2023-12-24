@@ -80,6 +80,7 @@
 * [[Building Blocks for Tic Tac Toe Project]]
 * [[Concept Repetition - Working with State]]
 * [[Updating State Based on Old State Correctly]]
+* [[User Input and Two Way Binding]]
 * 
 
 #### React Essentials - Practice Project
