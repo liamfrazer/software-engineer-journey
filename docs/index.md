@@ -82,6 +82,7 @@
 * [[Updating State Based on Old State Correctly]]
 * [[User Input and Two Way Binding]]
 * [[Rendering Multi-dimensional Lists]]
+* [[Updating Object State Immutably]]
 * 
 
 #### React Essentials - Practice Project
