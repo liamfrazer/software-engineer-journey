@@ -87,6 +87,7 @@
 * [[Avoid Intersection States]]
 * [[Deriving State From Props]]
 * [[Identifying Unnecessary State]]
+* [[Disabling Buttons Conditionally]]
 * 
 * 
 
