@@ -84,6 +84,7 @@
 * [[Rendering Multi-dimensional Lists]]
 * [[Updating Object State Immutably]]
 * [[Lifting State Up]]
+* [[Avoid Intersection States]]
 * 
 
 #### React Essentials - Practice Project
