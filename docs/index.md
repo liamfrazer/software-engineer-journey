@@ -85,6 +85,7 @@
 * [[Updating Object State Immutably]]
 * [[Lifting State Up]]
 * [[Avoid Intersection States]]
+* [[Deriving State From Props]]
 * 
 
 #### React Essentials - Practice Project

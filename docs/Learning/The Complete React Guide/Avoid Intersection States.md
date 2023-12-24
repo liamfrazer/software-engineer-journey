@@ -31,4 +31,6 @@ tags:
 		});
 	};
 ```
-* The above updateState function is ensuring that we're upda
+* The above updateState function is ensuring that we're updating state in an immutable way and ensuring that we're not merging the different states.
+
+
