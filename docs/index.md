@@ -11,6 +11,7 @@
 * [[What Makes a Pragmatic Programmer]]
 * [[ The Cat ate my Source Code]]
 * [[Software Entropy]]
+* [[Your Knowledge Portfolio]]
 * 
 
 ### Ultralearning
