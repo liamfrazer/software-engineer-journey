@@ -7,6 +7,7 @@
 * [[Try Everything]]
 
 ### The Pragmatic Programmer
+* [[Tips]]
 * [[What Makes a Pragmatic Programmer]]
 * 
 
