@@ -6,6 +6,10 @@
 * [[The Seed]]
 * [[Try Everything]]
 
+### The Pragmatic Programmer
+* [[What Makes a Pragmatic Programmer]]
+* 
+
 ### Ultralearning
 #### Principle 1 - Metalearning: First Draw a Map
 * [[Metalearning]]
