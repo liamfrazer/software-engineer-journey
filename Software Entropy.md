@@ -1,8 +1,6 @@
 ---
 tags:
   - pragmatic
-  - tips
 ---
-# Tips
-* Provide options, don't make lame excuses
+# Software Entropy
 * Don't live with broken windows

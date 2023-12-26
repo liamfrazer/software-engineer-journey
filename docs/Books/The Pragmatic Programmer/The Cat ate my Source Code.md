@@ -17,3 +17,4 @@ tags:
 * Try to flush out the lame excuses before voicing them aloud.
 
 * If you find yourself saying "I don't know", be sure to follow it up with "but I'll find out"
+* It's a great way to admin what you don't know, but then take responsibility like a pro.

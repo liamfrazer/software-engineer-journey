@@ -10,6 +10,7 @@
 * [[Tips]]
 * [[What Makes a Pragmatic Programmer]]
 * [[ The Cat ate my Source Code]]
+* [[Software Entropy]]
 * 
 
 ### Ultralearning
