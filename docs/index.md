@@ -6,6 +6,14 @@
 * [[The Seed]]
 * [[Try Everything]]
 
+### The Pragmatic Programmer
+* [[Tips]]
+* [[What Makes a Pragmatic Programmer]]
+* [[ The Cat ate my Source Code]]
+* [[Software Entropy]]
+* [[Your Knowledge Portfolio]]
+* 
+
 ### Ultralearning
 #### Principle 1 - Metalearning: First Draw a Map
 * [[Metalearning]]
