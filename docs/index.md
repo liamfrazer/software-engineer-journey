@@ -88,5 +88,5 @@
 * [[Deriving State From Props]]
 * [[Identifying Unnecessary State]]
 * [[Disabling Buttons Conditionally]]
-#### React Essentials - Practice Project
+#### Styling React Components
 
