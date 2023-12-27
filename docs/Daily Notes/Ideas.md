@@ -6,6 +6,7 @@
 * Weapon stat tracking system?
 * Food intake/health system?
 * "fruit" watch could be used to show you your vitals on screen
+* If not admin + check speed over 
 
 ## Work Ideas
 * Manage .MD files within an application, potentially GIT to follow changes?
