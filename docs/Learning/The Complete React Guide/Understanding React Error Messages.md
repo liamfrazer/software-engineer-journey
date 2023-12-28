@@ -25,3 +25,9 @@ tags:
 }
 ```
 
+```jsx
+	if (results.length < 1) {
+		return <p>Duration cannot be less than 0</p>;
+	}
+```
+
