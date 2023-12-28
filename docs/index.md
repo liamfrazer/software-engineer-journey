@@ -91,4 +91,5 @@
 #### Styling React Components
 * [[Vanilla CSS in React]]
 * [[Vanilla CSS Styles are NOT Scoped]]
+* [[Styling React apps with Inline Styles]]
 * 
