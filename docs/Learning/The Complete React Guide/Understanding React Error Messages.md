@@ -32,3 +32,12 @@ tags:
 ```
 
 ![[Pasted image 20231228181412.png]]
+## Strict mode
+```jsx
+import { StrictMode } from 'react';
+<StrictMode>
+	<App />
+</StrictMode>
+```
+
+* 
