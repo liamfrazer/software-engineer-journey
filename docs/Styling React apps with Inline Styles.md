@@ -4,6 +4,7 @@ tags:
   - CSS
   - inline
   - styles
+  - ternery
 ---
 # Styling React apps with Inline Styles
 * Styles are applied within the JSX code instead of separate CSS files
@@ -22,3 +23,8 @@ tags:
 * You need to know CSS
 * You need to style every element individually
 * There is no separation between JSX and CSS
+
+## Ternary Expression
+```jsx
+style={{backgroundColor: emailNotValid ? "#fed2d2" : "#d1d5db" }}
+```
