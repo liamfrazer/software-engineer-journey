@@ -21,3 +21,4 @@ tags:
 ## Disadvantages
 * You need to know CSS
 * You need to style every element individually
+* There is no separation between JSX and CSS
