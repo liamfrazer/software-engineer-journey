@@ -45,3 +45,5 @@ import { StrictMode } from 'react';
 
 ## React Devtools
 
+![[Pasted image 20231228182501.png]]
+
