@@ -40,4 +40,8 @@ import { StrictMode } from 'react';
 </StrictMode>
 ```
 
-* 
+* When every component gets executed twice, it helps capture duplication errors, e.g. twice the amount of variables within a table
+* It immediately shows when there could be a problem
+
+## React Devtools
+
