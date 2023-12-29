@@ -47,3 +47,17 @@ export default function Player() {
 * You can connect them to JSX elements, with a special prop `ref`
 * `ref` is a prop that can be added to any JSX element
 * `ref` takes a special value
+
+```jsx
+import { useState, useRef } from "react";
+
+const playerName = useRef(null);
+
+<input ref={playerName} type="text" onChange={handleChange} value={enteredPlayerName}/>
+```
+
+* The `ref` value will usually always be a JavaScript object that will always have a `current` property
+* Within the current property, the connected input will be stored
+
+![[Pasted image 20231229101126.png]]
+
