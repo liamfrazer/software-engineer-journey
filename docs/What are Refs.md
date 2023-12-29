@@ -61,3 +61,8 @@ const playerName = useRef(null);
 
 ![[Pasted image 20231229101126.png]]
 
+* The ternary expression can also now be shortened down to output the value if it's truthy, or output the default value if it's falsey
+
+* We're not updating a state only when clicked, then getting the value directly from the input element with the help of the `ref` hook
+
+* 
