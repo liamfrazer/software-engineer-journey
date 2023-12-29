@@ -90,4 +90,25 @@ const playerName = useRef(null);
 
 * We're not updating a state only when clicked, then getting the value directly from the input element with the help of the `ref` hook
 
-* 
+```jsx
+function App() {
+    const filePicker = React.useRef();
+    
+    const handleImage = () => {
+        filePicker.current.click();
+    }
+    
+  return (
+    <div id="app">
+      <p>Please select an image</p>
+      <p>
+        <input ref={filePicker} data-testid="file-picker" type="file" accept="image/*" />
+        <button onClick={handleImage}>Pick Image</button>
+      </p>
+    </div>
+  );
+}
+
+export default App;
+```
+
