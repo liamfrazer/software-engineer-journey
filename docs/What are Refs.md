@@ -1,7 +1,7 @@
 ---
 tags:
   - react
-  - refs
+  - useRef
 ---
 # What are Refs
 * A `ref` in React is a value, similar to how a variable or state is a value
@@ -43,6 +43,31 @@ export default function Player() {
 
 ```
 
+```jsx
+import { useState, useRef } from "react";
+export default function Player() {
+	const playerName = useRef(null);
+
+	const [enteredPlayerName, setEnteredPlayerName] = useState(null);
+
+	const handleClick = () => {
+		setEnteredPlayerName(playerName.current.value); // playerName.current.value;
+	};
+
+	return (
+		<>
+			<section id="player">
+				<h2>Welcome {enteredPlayerName ?? "unknown entity"}</h2>
+				<p>
+					<input ref={playerName} type="text" />
+					<button onClick={handleClick}>Set Name</button>
+				</p>
+			</section>
+		</>
+	);
+}
+
+```
 * All hook functions must be called inside of a component function
 * You can connect them to JSX elements, with a special prop `ref`
 * `ref` is a prop that can be added to any JSX element
