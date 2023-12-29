@@ -100,4 +100,5 @@
 * [[What are Refs]]
 * [[Refs vs State Values]]
 * [[Setting Timers and Managing State]]
+* [[Forwarding Refs to Custom Components]]
 * 
