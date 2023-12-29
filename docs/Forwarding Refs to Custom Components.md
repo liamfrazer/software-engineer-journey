@@ -14,3 +14,10 @@ tags:
 	dialog.current.showModal();
 ```
 
+* We can't forward a ref to another component as it will appear as a prop that doesn't exist
+
+* We need to use a special function provided by React
+```jsx
+import { forwardRef } from "react";
+```
+
