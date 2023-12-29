@@ -101,4 +101,5 @@
 * [[Refs vs State Values]]
 * [[Setting Timers and Managing State]]
 * [[Forwarding Refs to Custom Components]]
+* [[Exposing  Component APIs via the useImperativeHandle Hook]]
 * 
