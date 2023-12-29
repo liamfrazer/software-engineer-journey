@@ -37,3 +37,6 @@ const ResultModal = forwardRef(function ResultModal({ result, targetTime }, ref)
 		setTimerStarted(true);
 	};
 ```
+
+* We can now use the feature above to create callable functions from inside a component
+
