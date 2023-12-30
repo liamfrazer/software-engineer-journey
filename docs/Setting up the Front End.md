@@ -79,28 +79,28 @@ const Logo = () => {
 				display: "flex",
 				marginRight: "auto",
 				alignItems: "center",
-				gap: "8px",
+				gap: "15px",
 			}}
 		>
 			<Link to={"/"}>
 				<img
 					src="openai.png"
 					alt="openai"
-					width={"30"}
-					height={"30"}
+					width={"30px"}
+					height={"30px"}
 					className="image-inverted"
 				/>
-				<Typography
-					sx={{
-						display: { md: "block", sm: "none", xs: "none" },
-						marginRight: "auto",
-						fontWeight: "800",
-						textShadow: "2px 2px 20px #000",
-					}}
-				>
-					<span style={{ fontSize: "20px" }}>MERN</span>-GPT
-				</Typography>
 			</Link>
+			<Typography
+				sx={{
+					display: { md: "block", sm: "none", xs: "none" },
+					marginRight: "auto",
+					fontWeight: "800",
+					textShadow: "2px 2px 20px #000",
+				}}
+			>
+				<span style={{ fontSize: "20px" }}>MERN</span>-GPT
+			</Typography>
 		</div>
 	);
 };
@@ -109,4 +109,30 @@ export default Logo;
 
 ```
 
+## Header 
+
+```jsx
+import React from "react";
+import { AppBar, Toolbar } from "@mui/material";
+import Logo from "./shared/Logo";
+
+const Header = () => {
+	return (
+		<AppBar
+			sx={{
+				bgcolor: "transparent",
+				boxShadow: "none",
+				position: "static",
+			}}
+		>
+			<Toolbar sx={{ display: "flex" }}>
+				<Logo />
+			</Toolbar>
+		</AppBar>
+	);
+};
+
+export default Header;
+
+```
 
