@@ -174,5 +174,7 @@ export { getAllUsers, userSignUp };
 * Middleware are functions which get executed before a request is processed.
 * In Node and Express, middleware can be used to check JSON body validations, Tokens or Cookie Validations, Params Validations and more according to specific requirements
 
+![[Pasted image 20231230130914.png]]
+
 
 
