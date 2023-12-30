@@ -32,3 +32,23 @@ app.get("/", (req, res, next) => {});
 ![[Pasted image 20231230104337.png]]
 
 * POST is used to send some data along with the request
+
+```jsx
+app.use(express.json());
+```
+* This tells the application that we will be using JSON as the incoming and outgoing requests as JSON
+
+```jsx
+app.post("/", (req, res, next) => {
+	console.log(req.body.name);
+
+	return res.send("Hello");
+});
+
+
+```
+
+![[Pasted image 20231230104836.png]]
+![[Pasted image 20231230104846.png]]
+
+* PUT request is sending data directly from the front end
