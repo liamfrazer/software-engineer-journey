@@ -246,3 +246,7 @@ POST /api/v1/user/signup 422 3.406 ms - 103
 ```console
 POST /api/v1/user/signup 422 1.491 ms - 135
 ```
+
+## Login Functionality
+
+
