@@ -108,3 +108,9 @@ export default getAllUsers;
 
 ```
 
+```jsx
+// [1] GET /api/v1/user 200 32.896 ms - 27
+```
+![[Pasted image 20231230123310.png]]
+
+
