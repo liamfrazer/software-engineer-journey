@@ -184,3 +184,4 @@ export { useAuth, AuthProvider };
 
 ```
 
+* We can use an overall application state within the AuthContext.tsx file
