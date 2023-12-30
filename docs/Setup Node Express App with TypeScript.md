@@ -52,3 +52,16 @@ app.post("/", (req, res, next) => {
 ![[Pasted image 20231230104846.png]]
 
 * PUT request is sending data directly from the front end
+```jsx
+app.put("/", (req, res, next) => {
+	console.log(req.body.name);
+
+	return res.send("Hello");
+});
+```
+
+* While we're only using a static route at the moment, there will be points in the future where we may have multiple users requiring the express server at the same time
+* We could send the user ID within JSON to identify 
+* We could send the ID into the URL as a dynamic route
+
+## Dynamic Routing
