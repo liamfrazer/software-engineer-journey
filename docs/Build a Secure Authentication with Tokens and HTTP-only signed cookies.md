@@ -178,4 +178,71 @@ export { getAllUsers, userSignUp };
 
 ## Validation middleware with express-validator
 
+```jsx
+import { body, ValidationChain, validationResult } from "express-validator";
+import { Request, Response, NextFunction } from "express";
 
+const validate = (validations: ValidationChain[]) => {
+	return async (req: Request, res: Response, next: NextFunction) => {
+		for (let validation of validations) {
+			const result = await validation.run(req);
+			if (!result.isEmpty()) {
+				break;
+			}
+		}
+		const errors = validationResult(req);
+		if (errors.isEmpty()) {
+			return next();
+		}
+		return res.status(422).json({ errors: errors.array() });
+	};
+};
+
+const signupValidator = [
+	body("name").notEmpty().withMessage("Name is required"),
+	body("email").trim().isEmail().withMessage("Email is required"),
+	body("password")
+		.trim()
+		.isLength({ min: 6 })
+		.withMessage("Password should contain at least 6 characters"),
+];
+
+export { validate, signupValidator };
+
+```
+
+```jsx
+userRoutes.post("/signup", validate(signupValidator), userSignup);
+```
+```json
+{
+    "errors": [
+        {
+            "type": "field",
+            "value": "liam",
+            "msg": "Email is required",
+            "path": "email",
+            "location": "body"
+        }
+    ]
+}
+```
+```console
+POST /api/v1/user/signup 422 3.406 ms - 103
+```
+
+```json
+"errors": [
+        {
+            "type": "field",
+            "value": "12345",
+            "msg": "Password should contain at least 6 characters",
+            "path": "password",
+            "location": "body"
+        }
+    ]
+}
+```
+```console
+POST /api/v1/user/signup 422 1.491 ms - 135
+```
