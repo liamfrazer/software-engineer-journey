@@ -75,4 +75,20 @@ app.put("/user/:id", (req, res, next) => {
 ![[Pasted image 20231230105726.png]]
 ![[Pasted image 20231230105738.png]]
 
+![[Pasted image 20231230110121.png]]
+
+```jsx
+import express from "express";
+
+const app = express();
+
+// Middleware
+app.use(express.json());
+
+// Connection and Listener
+app.listen(5000, () => {
+	console.log("Listening on port 5000");
+});
+
+```
 
