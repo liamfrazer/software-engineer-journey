@@ -7,6 +7,9 @@ tags:
   - models
   - Mongoose
   - Middleware
+  - authentication
+  - Authorisation
+  - JWT
 ---
 # Build a Secure Authentication with Tokens and HTTP-only signed cookies
 ```jsx
@@ -304,7 +307,19 @@ const userLogin = async (req: Request, res: Response, next: NextFunction) => {
 ## Authorisation
 * Once the user authenticates, they are provided with a token.
 * To access the resource, the user will show the token used during the authentication process.
-* This authorisa
+* This authorisation will then ensure the user only has access to the resource they're entitled to.
+
+## JWT
+* JSON Web Token (JWT) is used to encrypt a payload into a signed token.
+* This contains the permissions or authorities of the user.
+
+## HTTP-only Cookies
+* HTTP-only cookies are a type of web cookie that comes with a special security attribute that restricts cookies from being access by JavaScript within the browser.
+* This prevents XSS attacks.
+
+
+
+
 
 
 
