@@ -113,4 +113,5 @@ export default getAllUsers;
 ```
 ![[Pasted image 20231230123310.png]]
 
+## Signup process and encrypting passwords
 
