@@ -110,4 +110,5 @@
 * [[Setup Node Express App with TypeScript]]
 * [[Integrate MongoDB Database Connection]]
 * [[Build a Secure Authentication with Tokens and HTTP-only signed cookies]]
+* [[Setting up the Front End]]
 * 
