@@ -298,7 +298,13 @@ const userLogin = async (req: Request, res: Response, next: NextFunction) => {
 
 
 ## Authentication
-
+* Authentication is step in which the user needs to verify their identity.
+* For this application, user user needs to provide the Email and Password created during the registration process
+* The user will then be provided with a token after the authentication process takes places
+## Authorisation
+* Once the user authenticates, they are provided with a token.
+* To access the resource, the user will show the token used during the authentication process.
+* This authorisa
 
 
 
