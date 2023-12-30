@@ -46,3 +46,5 @@ userRoutes.get("/", getAllUsers);
 export default userRoutes;
 
 ```
+
+## Database Models
