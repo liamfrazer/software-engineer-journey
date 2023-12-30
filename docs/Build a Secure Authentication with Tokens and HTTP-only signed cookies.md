@@ -249,4 +249,54 @@ POST /api/v1/user/signup 422 1.491 ms - 135
 
 ## Login Functionality
 
+```json
+{
+    "message": "OK",
+    "id": "65901f7bacad39432540b36c"
+}
+```
+```console
+[1] POST /api/v1/user/login 200 83.719 ms - 48
+```
+
+```jsx
+const loginValidator = [
+	body("email").trim().isEmail().withMessage("Email is required"),
+	body("password")
+		.trim()
+		.isLength({ min: 6 })
+		.withMessage("Password should contain at least 6 characters"),
+];
+
+const signupValidator = [
+	body("name").notEmpty().withMessage("Name is required"),
+	...loginValidator,
+];
+
+export { validate, signupValidator, loginValidator };
+
+```
+```jsx
+const userLogin = async (req: Request, res: Response, next: NextFunction) => {
+	try {
+		const { email, password } = req.body;
+		const user = await User.findOne({ email });
+		if (!user) {
+			return res.status(401).send("User not found");
+		}
+		const isPasswordCorrect = await compare(password, user.password);
+		if (!isPasswordCorrect) {
+			return res.status(403).send("Invalid credentials");
+		}
+		return res.status(200).json({ message: "OK", id: user._id.toString() });
+	} catch (error) {
+		console.log(error);
+		return res.status(200).json({ message: "ERROR", cause: error.message });
+	}
+};
+```
+
+
+
+
 
