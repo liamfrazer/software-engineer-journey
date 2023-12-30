@@ -11,27 +11,41 @@ config();
 ```
 ![[Pasted image 20231230111336.png]]
 ```jsx
-import { connect, disconnect } from "mongoose";
-const connectToDatabase = async () => {
-	try {
-		await connect(process.env.MONGODB_URI as string);
-	} catch (error) {
-		console.error(error);
-		throw new Error("Failed to connect to MongoDB");
-	}
-};
+// app.ts
+import express from "express";
+import { config } from "dotenv";
+config();
 
-const disconnectFromDatabase = async () => {
-	try {
-		await disconnect();
-	} catch (error) {
-		console.error(error);
-		throw new Error("Failed to disconnect from MongoDB");
-	}
-};
+const app = express();
 
-export { connectToDatabase, disconnectFromDatabase };
+// Middleware
+app.use(express.json());
+
+export default app;
+
 
 ```
 
+```jsx
+// index.ts
+import app from "./app.js";
+import { connectToDatabase } from "./db/connection.js";
+
+const PORT = process.env.port || 5000;
+
+// Connection and Listener
+connectToDatabase()
+	.then(() => {
+		app.listen(PORT, () => {
+			console.log("Server open & connected to MongoDB");
+		});
+	})
+	.catch((err) => {
+		console.log(err);
+	});
+
+```
+```jsx
+// Server open & connected to MongoDB
+```
 
