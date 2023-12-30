@@ -138,3 +138,4 @@ export default Header;
 
 * The context API will be very useful to show components to the user, depending on whether they're logged in or not using our backend.
 
+## Component showing based on context
