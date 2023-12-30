@@ -176,5 +176,6 @@ export { getAllUsers, userSignUp };
 
 ![[Pasted image 20231230130914.png]]
 
+## Validation middleware with express-validator
 
 
