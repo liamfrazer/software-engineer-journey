@@ -4,6 +4,8 @@ tags:
   - Secure
   - Tokens
   - HTTP-only
+  - models
+  - Mongoose
 ---
 # Build a Secure Authentication with Tokens and HTTP-only signed cookies
 ```jsx
@@ -48,3 +50,41 @@ export default userRoutes;
 ```
 
 ## Database Models
+
+```jsx
+import mongoose from "mongoose";
+import { randomUUID } from "crypto";
+
+const chatSchema = new mongoose.Schema({
+	id: {
+		type: String,
+		default: randomUUID,
+		role: { type: String, required: true },
+		content: {
+			type: String,
+			required: true,
+		},
+	},
+});
+
+const userSchema = new mongoose.Schema({
+	name: {
+		type: String,
+		required: true,
+	},
+	email: {
+		type: String,
+		required: true,
+		unique: true,
+	},
+	password: {
+		type: String,
+		required: true,
+	},
+	chats: [chatSchema],
+});
+
+export default mongoose.model("User", userSchema);
+
+```
+
