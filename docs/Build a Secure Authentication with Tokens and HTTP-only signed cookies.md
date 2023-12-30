@@ -6,6 +6,7 @@ tags:
   - HTTP-only
   - models
   - Mongoose
+  - Middleware
 ---
 # Build a Secure Authentication with Tokens and HTTP-only signed cookies
 ```jsx
@@ -168,4 +169,10 @@ export { getAllUsers, userSignUp };
     ]
 }
 ```
+
+## Middlewares
+* Middleware are functions which get executed before a request is processed.
+* In Node and Express, middleware can be used to check JSON body validations, Tokens or Cookie Validations, Params Validations and more according to specific requirements
+
+
 
