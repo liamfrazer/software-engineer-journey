@@ -28,3 +28,7 @@ app.get("/", (req, res, next) => {});
 ```
 * / is the location or URL that the GET request would be accessed from, in our example it will just be the main URL
 * next is used to move on top the next middleware
+
+![[Pasted image 20231230104337.png]]
+
+* POST is used to send some data along with the request
