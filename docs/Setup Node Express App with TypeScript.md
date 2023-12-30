@@ -65,3 +65,14 @@ app.put("/", (req, res, next) => {
 * We could send the ID into the URL as a dynamic route
 
 ## Dynamic Routing
+```jsx
+app.put("/user/:id", (req, res, next) => {
+	console.log(req.params.id);
+
+	return res.send("Hello");
+});
+```
+![[Pasted image 20231230105726.png]]
+![[Pasted image 20231230105738.png]]
+
+
