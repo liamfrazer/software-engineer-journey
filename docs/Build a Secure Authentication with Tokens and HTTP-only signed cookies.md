@@ -147,3 +147,25 @@ export { getAllUsers, userSignUp };
 
 ```
 
+```jsx
+// POST /api/v1/user/signup 200 86.516 ms - 48
+```
+![[Pasted image 20231230125213.png]]
+![[Pasted image 20231230125245.png]]
+
+```json
+{
+    "message": "OK",
+    "users": [
+        {
+            "_id": "659012136e04c2fa96a1a5a0",
+            "name": "Liam",
+            "email": "liam.frazer@gmail.com",
+            "password": "$2b$10$EbD.7KUwZmKe89GMf.n4nek8WlZNjpa9wrZsHpRWlh3sgZ4bvgmMu",
+            "chats": [],
+            "__v": 0
+        }
+    ]
+}
+```
+
