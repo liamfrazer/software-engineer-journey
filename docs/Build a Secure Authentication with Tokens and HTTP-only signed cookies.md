@@ -317,6 +317,23 @@ const userLogin = async (req: Request, res: Response, next: NextFunction) => {
 * HTTP-only cookies are a type of web cookie that comes with a special security attribute that restricts cookies from being access by JavaScript within the browser.
 * This prevents XSS attacks.
 
+```jsx
+import jwt from "jsonwebtoken";
+
+const createToken = (id: string, email: string, expiresIn: string) => {
+	const payload = {
+		id,
+		email,
+	};
+	const token = jwt.sign(payload, process.env.JWT_SECRET, {
+		expiresIn: expiresIn,
+	});
+	return token;
+};
+
+export default createToken;
+
+```
 
 
 
