@@ -113,4 +113,5 @@
 * [[Setting up the Front End]]
 * [[Login Page and handling form data]]
 * [[Axios - Sending the API Request from React to Express]]
+* [[useEffect() to auto-login if authenticated]]
 * 
