@@ -96,4 +96,22 @@ export default Login;
 ![[Pasted image 20231231115730.png]]
 
 * We can create a function to grab the form data without having to use a state
-* 
+
+```jsx
+<form onSubmit={(e) => handleSubmit(e)} style={{ margin: "auto", padding: "30px", boxShadow: " 10px 10px 20px #000", borderRadius: "10px", border: "none" }}>
+
+```
+```jsx
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		const formData = new FormData(e.currentTarget);
+		const email = formData.get("email");
+		const password = formData.get("password");
+		console.log(email, password);
+	};
+```
+```console
+liam.frazer@gmail.com 12345
+```
+
+
