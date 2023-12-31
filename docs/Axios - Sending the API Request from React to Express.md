@@ -71,6 +71,15 @@ const Login = () => {
 [1] POST /api/v1/user/login 200 73.555 ms - 61
 ```
 
+```jsx
+// app.ts
+
+import cors from "cors";
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+```
+
+![[Pasted image 20231231130148.png]]
+![[Pasted image 20231231130213.png]]
 
 
 
