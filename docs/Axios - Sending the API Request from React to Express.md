@@ -46,5 +46,31 @@ import { loginUser } from "../helpers/api-communicator";
 	};
 ```
 
+```jsx
+// Pages - Login.tsx
+const Login = () => {
+	const auth = useAuth();
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		const formData = new FormData(e.currentTarget);
+		const email = formData.get("email") as string;
+		const password = formData.get("password") as string;
+		try {
+			toast.loading("Signing In!", { id: "login" });
+			await auth?.login(email, password);
+			toast.success("Signed In Successfully", { id: "login" });
+		} catch (error) {
+			console.log(error);
+			toast.error("Signing In Failed", { id: "login" });
+		}
+	};
+```
+
+![[Pasted image 20231231124322.png]]
+```console
+[1] POST /api/v1/user/login 200 73.555 ms - 61
+```
+
+
 
 
