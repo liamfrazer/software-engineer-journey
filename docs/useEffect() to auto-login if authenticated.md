@@ -45,9 +45,6 @@ const checkAuthStatus = async () => {
 ```
 ```jsx
 // contexts - AuthContexts.tsx
-const AuthProvider = ({ children }: { children: ReactNode }) => {
-	const [user, setUser] = useState<User | null>(null);
-	const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
 	useEffect(() => {
 		// Fetch if the user's cookies are valid then skip login
@@ -60,13 +57,6 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
 		}
 		checkStatus();
 	}, []);
-	const login = async (email: string, password: string) => {
-		const data = await loginUser(email, password);
-		if (data) {
-			setUser({ email: data.email, name: data.name });
-			setIsLoggedIn(true);
-		}
-	};
 ```
 ```jsx
 // controllers - user-controller.ts
