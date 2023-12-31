@@ -95,3 +95,5 @@ export default Login;
 ```
 ![[Pasted image 20231231115730.png]]
 
+* We can create a function to grab the form data without having to use a state
+* 
