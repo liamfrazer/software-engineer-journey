@@ -43,4 +43,49 @@ const checkAuthStatus = async () => {
 	return data;
 };
 ```
+```jsx
+// contexts - AuthContexts.tsx
+const AuthProvider = ({ children }: { children: ReactNode }) => {
+	const [user, setUser] = useState<User | null>(null);
+	const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+
+	useEffect(() => {
+		// Fetch if the user's cookies are valid then skip login
+		async function checkStatus() {
+			const data = await checkAuthStatus();
+			if (data) {
+				setUser({ email: data.email, name: data.name });
+				setIsLoggedIn(true);
+			}
+		}
+		checkStatus();
+	}, []);
+	const login = async (email: string, password: string) => {
+		const data = await loginUser(email, password);
+		if (data) {
+			setUser({ email: data.email, name: data.name });
+			setIsLoggedIn(true);
+		}
+	};
+```
+```jsx
+// controllers - user-controller.ts
+const verifyUser = async (req: Request, res: Response, next: NextFunction) => {
+	try {
+		const user = await User.findById(res.locals.jwtData.id);
+		if (!user) {
+			return res.status(401).send("User not found or Token malfunctioned");
+		}
+		if (user._id.toString() !== res.locals.jwtData.id) {
+			return res.status(401).send("Permissions did not match");
+		}
+
+		return res.status(200).json({ message: "OK", name: user.name, email: user.email });
+	} catch (error) {
+		console.log(error);
+		return res.status(200).json({ message: "ERROR", cause: error.message });
+	}
+};
+```
+
 
