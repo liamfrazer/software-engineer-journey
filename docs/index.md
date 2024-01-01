@@ -118,4 +118,5 @@
 * [[Building the React Front end for OpenAI ChatGPT]]
 * [[Integrating the User Messages to the Backend]]
 * [[Chat Route to see previous chat]]
+* [[Clear Conversation Functionality]]
 * 
