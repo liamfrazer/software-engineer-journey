@@ -77,3 +77,11 @@ const logoutUser = async (req: Request, res: Response, next: NextFunction) => {
 	}, [auth, navigate]);
 ```
 
+## Protecting Chat page if not logged in
+```jsx
+// App.tsx
+
+{auth?.isLoggedIn && auth?.user && <Route path="/chat" element={<Chat />} />}
+```
+
+
