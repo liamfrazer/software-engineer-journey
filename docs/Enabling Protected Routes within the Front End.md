@@ -4,6 +4,7 @@ tags:
   - routes
   - Protected
   - useNavigate
+  - useEffect
 ---
 # Enabling Protected Routes within the Front End
 ```jsx
@@ -66,4 +67,13 @@ const logoutUser = async (req: Request, res: Response, next: NextFunction) => {
 };
 ```
 
+## Login redirect if logged in
+```jsx
+// pages - Login.tx
+	useEffect(() => {
+		if (auth?.user) {
+			return navigate("/chat");
+		}
+	}, [auth, navigate]);
+```
 
