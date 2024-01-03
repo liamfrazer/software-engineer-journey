@@ -22,7 +22,6 @@ namespace HelloWorld
 * Cannot miss using `"` around a STRING
 * C# is case-sensitive, wrong case will cause complications
 * Lowercase `readline` is different than `ReadLine`
-* 
 
 
 
