@@ -54,4 +54,46 @@ export default ProjectsSidebar;
 ```
 
 3. Adding the "New Project" Component & A Reusable Input Component
+```jsx
+// Input.jsx
+const Input = ({ label, textArea, ...props }) => {
+	return (
+		<p>
+			<label>{label}</label>
+			{textArea ? <textarea {...props} /> : <input {...props} />}
+		</p>
+	);
+};
 
+export default Input;
+
+```
+```jsx
+// NewProject.jsx
+import Input from "./Input";
+
+const NewProject = () => {
+	return (
+		<div>
+			<menu>
+				<li>
+					<button>Cancel</button>
+				</li>
+				<li>
+					<button>Save</button>
+				</li>
+			</menu>
+			<div>
+				<Input label="Title" />
+				<Input label="Description" textArea />
+				<Input label="Due Date" />
+			</div>
+		</div>
+	);
+};
+
+export default NewProject;
+
+```
+4. Styling Buttons & Inputs with Tailwind CSS
+5. 
