@@ -39,4 +39,3 @@ export default ProjectsSidebar;
 ```
 
 2. Styling the sidebar & button with Tailwind CSS
-3. 
