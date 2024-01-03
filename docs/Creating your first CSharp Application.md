@@ -17,7 +17,12 @@ namespace HelloWorld
 }
 
 ```
-
+* It matters where you type your code (e.g outside of the code blocks{ })
+* A C# instruction has to end with a `;`
+* Cannot miss using `"` around a STRING
+* C# is case-sensitive, wrong case will cause complications
+* Lowercase `readline` is different than `ReadLine`
+* 
 
 
 
