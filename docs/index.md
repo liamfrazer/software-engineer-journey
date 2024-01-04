@@ -125,4 +125,5 @@
 
 ### CSharp Fundamentals for Beginners
 * [[Creating your first CSharp Application]]
+* [[Understanding Data Types and Variables]]
 * 
