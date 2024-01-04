@@ -11,7 +11,7 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-            Console.ReadLine();
+            Console.ReadLine(); // Wait for further input
         }
     }
 }
@@ -23,6 +23,7 @@ namespace HelloWorld
 * C# is case-sensitive, wrong case will cause complications
 * Lowercase `readline` is different than `ReadLine`
 
+* Commenting out code to be used for later or write notes regarding the application
 
 
 
