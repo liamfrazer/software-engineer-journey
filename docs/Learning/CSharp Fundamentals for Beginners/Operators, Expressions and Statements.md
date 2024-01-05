@@ -14,4 +14,6 @@ tags:
 * Each statement is made up of 1 or more expressions
 
 * Operands are things like objects, classes and variables, these are the subject of the statement of code
-* Operators are tools that act on the ope
+* Operators are tools that act on the operand to perform an action
+
+* 
