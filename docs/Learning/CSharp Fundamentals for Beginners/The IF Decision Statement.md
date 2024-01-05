@@ -87,3 +87,48 @@ namespace Program
 
 * If there is only one line of code underneath an IF statement, the code blocks are not required
 
+```c#
+namespace Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Liam's Big Giveaway");
+            Console.Write("Choose a Door: 1, 2 or 3: ");
+            string userValue = Console.ReadLine();
+            string message;
+
+            if (userValue == "1")
+                message = "You won a new car!";
+            else if (userValue == "2")
+                message = "You won a new boat!";
+            else if (userValue == "3")
+                message = "You won a new cat!";
+            else
+                message = "Sorry, we didn't understand.";
+
+            Console.WriteLine(message);
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+* Two line of code will cause the second line to be "outside" of the hidden code block
+
+```c#
+            {
+                message = "Sorry, we didn't understand.";
+                message += "You lose.";
+            }
+```
+* The assignment and concat operator can be combined into one
+
+
+
+
+
+
+
+
