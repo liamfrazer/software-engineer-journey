@@ -19,4 +19,75 @@ tags:
 * An expressions is made up of operands and operators
 * You use expressions to form statements, which are how instructions are expressed to the compiler/dotnet runtime
 
-* 
+```c#
+namespace Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Variable declaration
+            int x, y, a, b;
+
+            // Assignment operator
+            x = 3;
+            y = 2;
+            a = 1;
+            b = 0;
+
+            // Addition operator
+            x = 3 + 4;
+
+            // Subtraction operator
+            x = 4 - 3;
+
+            // Multiplication operator
+            x = 10 * 5;
+
+            // Division operator
+            x = 10 / 5;
+
+            // Order of operations using parenthesis
+            x = (x + y) * (a - b);
+
+            // Equality operator
+            if (x == y)
+            {
+            }
+
+            // Greater than operator
+            if (x > y)
+            {
+            }
+
+            // Less than operator
+            if (x < y)
+            {
+            }
+
+            // Greater or equal to operator
+            if (x >= y)
+            {
+            }
+
+            // Conditional AND operator
+            if ((x > y) && (a > b))
+            {
+            }
+
+            // Conditional OR operator
+            if ((x > y) || (a > b))
+            {
+            }
+
+            // In-line Conditional Operator
+            string message = (x == 1) ? "Car" : "Boat";
+
+            // Member access and Method invocation
+            Console.WriteLine("Hi");
+        }
+    }
+}
+```
+
+
