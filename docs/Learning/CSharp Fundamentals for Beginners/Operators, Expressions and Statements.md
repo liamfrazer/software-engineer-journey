@@ -16,4 +16,7 @@ tags:
 * Operands are things like objects, classes and variables, these are the subject of the statement of code
 * Operators are tools that act on the operand to perform an action
 
+* An expressions is made up of operands and operators
+* You use expressions to form statements, which are how instructions are expressed to the compiler/dotnet runtime
+
 * 
