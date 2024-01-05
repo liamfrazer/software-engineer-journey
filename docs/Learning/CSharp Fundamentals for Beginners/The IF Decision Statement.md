@@ -85,3 +85,5 @@ namespace Program
 * Moving `message` outside of the last `else` statement will cause an error if `message` does not exist as a variable in the outer scope.
 * A cleaner example of the code 
 
+* If there is only one line of code underneath an IF statement, the code blocks are not required
+
