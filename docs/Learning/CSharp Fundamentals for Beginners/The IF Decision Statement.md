@@ -135,7 +135,11 @@ string message = (userValue == "1") ? "Boat" : "strand of hair";
 ```c#
  Console.WriteLine("You won a {0}, therefor you won a {1}.", userValue, message);
 ```
-* Replacement values can be used like `{0}` 
+* Replacement values can be used like `{0}` to then input a value into.
+* The first item in the list will be element 0, replaced by the list of input parameters after the literal string.
+
+
+
 
 
 

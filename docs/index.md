@@ -127,4 +127,5 @@
 * [[Creating your first CSharp Application]]
 * [[Understanding Data Types and Variables]]
 * [[The IF Decision Statement]]
+* [[Operators, Expressions and Statements]]
 * 
