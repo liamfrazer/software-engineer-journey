@@ -68,5 +68,20 @@ namespace Program
 }
 ```
 * If any of the values are true, that code block will be ran
-* For example, if the second `else if` statement is true, the values
+* For example, if the second `else if` statement is true, the other codeblock is not ran
+
+* An `else` statement at the end of the construct can be used as a safety catch to catch any other case possible.
+
+* In the above code, there are plenty of examples of DRY examples (don't repeat yourself)
+* Defining a variable within an inner scope, means that specific variable will not be accessible outside of that scope.
+```c#
+            else
+            {
+                string message = "Sorry, we didn't understand.";
+            }
+            Console.WriteLine(message);
+            Console.ReadLine();
+```
+* Moving `message` outside of the last `else` statement will cause an error if `message` does not exist as a variable in the outer scope.
+
 
