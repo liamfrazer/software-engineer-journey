@@ -83,5 +83,5 @@ namespace Program
             Console.ReadLine();
 ```
 * Moving `message` outside of the last `else` statement will cause an error if `message` does not exist as a variable in the outer scope.
-
+* A cleaner example of the code 
 
