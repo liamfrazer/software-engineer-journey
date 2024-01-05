@@ -130,7 +130,14 @@ string message = (userValue == "1") ? "Boat" : "strand of hair";
 ```
 * Similar to a Ternary operator, if the evaluation is TRUE, we would take the value from after the ?
 * If the evaluation is FALSE, we would take the value after the :
-* This is only usable when there are two valuations.
+* This is only usable when there are two valuations. Like an IF ELSE statement
+
+```c#
+ Console.WriteLine("You won a {0}, therefor you won a {1}.", userValue, message);
+```
+* Replacement values can be used like `{0}` 
+
+
 
 
 
