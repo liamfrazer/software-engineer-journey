@@ -46,6 +46,20 @@ Console.WriteLine(numbers.Length);
 ```
 * Iterating through each value within the array, using a `for` loop
 
+```c#
+        {
+            string[] names = new string[] { "Liam", "Frazer", "Michael", "David" };
+            
+            foreach (string name in names)
+            {
+                Console.WriteLine(name);
+            }
+        }
+```
+* Using a `foreach` loop to iterate through the array
+
+
+
 
 
 
