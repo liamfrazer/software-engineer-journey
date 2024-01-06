@@ -87,5 +87,54 @@ namespace Program
 * Overloaded versions of methods
 * You can create additional versions of the same method, with a different method signature, the signature is the number and the datatype
 
+```c#
+namespace Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("The Name Game");
+
+            Console.Write("First Name: ");
+            string firstName = Console.ReadLine();
+
+            Console.Write("Last Name: ");
+            string lastName = Console.ReadLine();
+
+            Console.Write("City: ");
+            string city = Console.ReadLine();
+
+            DisplayResult(
+                ReverseString(firstName),
+                ReverseString(lastName),
+                ReverseString(city));
+            Console.ReadLine();
+        }
+
+        private static string ReverseString(string message)
+        {
+            char[] messageArray = message.ToCharArray();
+            Array.Reverse(messageArray);
+            return String.Concat(messageArray);
+        }
+
+        private static void DisplayResult(
+            string reversedFirstName,
+            string reversedLastName,
+            string reversedCity)
+        {
+            Console.Write("Results: ");
+            Console.Write(String.Format("{0} {1} {2}",
+                reversedFirstName,
+                reversedLastName,
+                reversedCity));
+        }
+    }
+}
+
+```
+
+
 
 
