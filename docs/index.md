@@ -132,4 +132,5 @@
 * [[Understanding Arrays]]
 * [[Defining and Calling Methods]]
 * [[While Iteration Statement]]
+* [[Working with Strings]]
 * 
