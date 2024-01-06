@@ -58,6 +58,26 @@ Console.WriteLine(numbers.Length);
 ```
 * Using a `foreach` loop to iterate through the array
 
+```c#
+{
+    string quote = "You can get what you want out of life" + 
+        " if you help enough other people get what they want";
+
+    char[] charArray = quote.ToCharArray();
+
+    Array.Reverse(charArray);
+
+    foreach (char c in charArray)
+    {
+        Console.Write(c);
+    }
+    Console.ReadLine();
+}
+```
+* Reversing a string by using the `toCharArray()` method, the `Array.Reverse` method and the `foreach` iteration loop.
+
+
+
 
 
 
