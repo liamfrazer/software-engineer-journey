@@ -75,6 +75,10 @@ namespace Program
 ```
 * Example of code with multiple points of repetition that can be replaced with methods/functions
 
+* To create an input parameter to a method, it requires a datatype and a name
+* This allows code outside of the method to pass through a variable to then be used inside the method
+
+
 
 
 
