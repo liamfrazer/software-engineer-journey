@@ -26,7 +26,8 @@ tags:
             // string myString = string.Format("Phone Number: {0:(###) ###-####}", 1234567899);
 ```
 
-* `myString.Substring
+* `myString.Substring()` allows us to extract everything after the value provided within a string
+* Two values can be provided to take an 
 
 
 
