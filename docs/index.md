@@ -130,4 +130,5 @@
 * [[Operators, Expressions and Statements]]
 * [[For Iteration Statement]]
 * [[Understanding Arrays]]
+* [[Defining and Calling Methods]]
 * 
