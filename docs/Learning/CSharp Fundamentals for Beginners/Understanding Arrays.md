@@ -25,7 +25,32 @@ Console.WriteLine(numbers[2]);
 ```c#
 Console.WriteLine(numbers.Length);
 ```
-* Accessing the length of the array by usi
+* Accessing the length of the array by using the `length` property
+
+```c#
+        {
+            int[] numbers = new int[] { 4, 8, 15, 16, 23, 42 };
+        }
+```
+* Assigning the values of the array at runtime, while also allowing the complier to work out how many values are within the array
+
+```c#
+{
+    string[] names = new string[] { "Liam", "Frazer", "Michael", "David" };
+
+    for (int i = 0; i < names.Length; i++)
+    {
+        Console.WriteLine(names[i]);
+    }
+}
+```
+* Iterating through each value within the array, using a `for` loop
+
+
+
+
+
+
 
 
 
