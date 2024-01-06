@@ -8,6 +8,10 @@
 * "fruit" watch could be used to show you your vitals on screen
 * If not admin + check speed over % + in a vehicle = ban/screenshot
 
+## Game Ideas
+* Environment is impacted by spells (e.g things set on fire if hit by a fire spell)
+* Replace the functionality of a spell with a dino instead
+
 ## Work Ideas
 * Manage .MD files within an application, potentially GIT to follow changes?
 * The agents shouldn't have to tell OPS what chat they're currently on, we should be able to retrieve that from the MI - Saves asking the question + saves agent time away from the conversation
