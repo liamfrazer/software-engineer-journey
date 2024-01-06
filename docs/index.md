@@ -134,4 +134,5 @@
 * [[While Iteration Statement]]
 * [[Working with Strings]]
 * [[Working with Dates and Times]]
+* [[Understanding Classes]]
 * 
