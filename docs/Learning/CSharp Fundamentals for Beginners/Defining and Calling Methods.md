@@ -78,6 +78,9 @@ namespace Program
 * To create an input parameter to a method, it requires a datatype and a name
 * This allows code outside of the method to pass through a variable to then be used inside the method
 
+* The void keyword means that we're not bothered about the return of the method
+* If this was changed to `string` for example, we're asking the Method to return back a string
+
 
 
 
