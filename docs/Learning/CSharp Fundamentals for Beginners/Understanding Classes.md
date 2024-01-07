@@ -15,3 +15,10 @@ Car myCar = new Car();
 
 * The `new` keyword uses the blueprint, in order to create a new instance of Car
 * Car describes the class/the blueprint, we want to work with one instance which we've set in memory as `myCar`
+
+```c#
+private static decimal DetermineMarketValue(Car car)
+```
+* The uppercase Car corresponds to the name of the Class, the l
+
+
