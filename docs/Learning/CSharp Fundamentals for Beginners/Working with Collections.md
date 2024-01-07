@@ -45,4 +45,18 @@ tags:
 ![[Pasted image 20240107155627.png]]
 ![[Pasted image 20240107155634.png]]
 
+* C# introduced Generic Collections, that requires myself to make it specific by providing the data type within that collection
+
+```c#
+            // List<T>
+            List<Car> myList = new List<Car>();
+            myList.Add(carOne);
+            myList.Add(carTwo);
+            myList.Add(bookOne);
+```
+![[Pasted image 20240107155940.png]]
+
+* Dictionaries contains a key and a definition next to it
+* Neither Make or Model would be appropriate as 
+
 
