@@ -57,6 +57,18 @@ tags:
 ![[Pasted image 20240107155940.png]]
 
 * Dictionaries contains a key and a definition next to it
-* Neither Make or Model would be appropriate as 
+* Neither Make or Model would be appropriate as Dictionary keys, as there could be duplicates and will be duplicates of the same value, instead we can add an additional VIN
+
+```c#
+Dictionary<string, Car> myDictionary = new Dictionary<string, Car>();
+
+myDictionary.Add(carOne.VIN, carOne);
+myDictionary.Add(carTwo.VIN, carTwo);
+
+Console.WriteLine(myDictionary["1"].Make); // Toyota
+```
+
+
+
 
 
