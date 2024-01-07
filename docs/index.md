@@ -142,4 +142,5 @@
 * [[Working with Collections]]
 * [[ Working with LINQ (Language Integrated Query) Syntax]]
 * [[Enumerations and the Switch Decision Statement]]
+* [[Gracefully Handling Exceptions]]
 * 
