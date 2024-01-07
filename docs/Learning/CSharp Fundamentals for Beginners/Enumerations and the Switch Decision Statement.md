@@ -10,18 +10,44 @@ tags:
 ![[Pasted image 20240107173154.png]]
 
 ```c#
- switch (todo.Status)
+ private static void PrintAssesment(List<Todo> todos)
  {
-     case Status.Completed:
+     foreach (var todo in todos)
+     {
+         switch (todo.Status)
+         {
+             case Status.NotStarted:
+                 Console.ForegroundColor = ConsoleColor.DarkRed;
+                 break;
 
-         break;
-     case Status.Deleted:
+             case Status.InProgress:
+                 Console.ForegroundColor = ConsoleColor.Yellow;
+                 break;
 
-         break;
-     default:
-         break;
+             case Status.OnHold:
+                 Console.ForegroundColor = ConsoleColor.Red;
+                 break;
+
+             case Status.Completed:
+                 Console.ForegroundColor = ConsoleColor.Green;
+                 break;
+
+             case Status.Deleted:
+                 Console.ForegroundColor = ConsoleColor.DarkRed;
+                 break;
+             default:
+                 break;
+         }
+         Console.WriteLine(todo.Description);
+     }
  }
 ```
+```console
+
+```
+
+
+
 
 
 
