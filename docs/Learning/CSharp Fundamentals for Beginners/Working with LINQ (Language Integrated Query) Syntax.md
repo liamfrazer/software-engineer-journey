@@ -177,7 +177,9 @@ System.Linq.Enumerable+WhereListIterator`1[Program.Car]
 System.Linq.Enumerable+WhereSelectListIterator`2[Program.Car,<>f__AnonymousType0`2[System.String,System.String]]
 ```
 
-* There is a lot going on under the bonnet with LINQ, but defining the types with `var` helps massively as the
+* There is a lot going on under the bonnet with LINQ, but defining the types with `var` helps massively as the datatype might be extreamly long as seen in the example above
+
+
 
 
 
