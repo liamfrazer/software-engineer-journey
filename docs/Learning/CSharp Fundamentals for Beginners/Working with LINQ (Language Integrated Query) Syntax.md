@@ -98,8 +98,48 @@ Console.WriteLine(myCars.TrueForAll(p => p.Year > 2020)); // False
 myCars.ForEach(i => Console.WriteLine("{0} {1}",i.Make, i.Model));
 ```
 ```console
-
+BMW 550i
+Toyota 4Runner
+BMW 745li
+Ford Escape
+Nissan Rogue
 ```
+
+
+```c#
+myCars.ForEach(i => Console.WriteLine("{0} {1} {2:C}",i.Make, i.Model, i.StickerPrice));
+```
+```console
+BMW 550i £55,000.00
+Toyota 4Runner £35,000.00
+BMW 745li £25,000.00
+Ford Escape £32,000.00
+Nissan Rogue £38,000.00
+```
+
+```c#
+            myCars.ForEach(i => i.StickerPrice -= 3000);
+            myCars.ForEach(i => Console.WriteLine("{0} {1} {2:C}",i.Make, i.Model, i.StickerPrice));
+```
+```console
+BMW 550i £52,000.00
+Toyota 4Runner £32,000.00
+BMW 745li £22,000.00
+Ford Escape £29,000.00
+Nissan Rogue £35,000.00
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
