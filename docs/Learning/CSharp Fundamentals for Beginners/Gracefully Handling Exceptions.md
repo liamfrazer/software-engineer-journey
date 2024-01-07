@@ -47,6 +47,40 @@ Could not find file 'C:\dev\tex.txt'.
 ![[Pasted image 20240107175952.png]]
 * In our example, we can use a `try/catch` statement to work from the most specific cases with the more specific errors, down to a general `Exception` case to ensure it's still captured.
 
+```c#
+       static void Main(string[] args)
+       {
+           try
+           {
+               string content = File.ReadAllText(@"C:\dev\tex.txt");
+               Console.WriteLine(content);
+           }
+           catch (FileNotFoundException ex)
+           {
+               Console.WriteLine("Error - File not found: " + ex.Message);
+           }
+           catch (DirectoryNotFoundException ex)
+           {
+               Console.WriteLine("Error - Directory not found: " + ex.Message);
+           }
+           catch (Exception ex)
+           {
+               Console.WriteLine("There was a problem!" + ex.Message);
+           }
+           finally
+           {
+               // Code to finalise
+               // Setting objects to null
+               // Closing database connections
+               Console.WriteLine("Closing application now ...");
+           }
+           Console.ReadLine();
+       }
+```
+
+
+
+
 
 
 

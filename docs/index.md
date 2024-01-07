@@ -143,4 +143,5 @@
 * [[ Working with LINQ (Language Integrated Query) Syntax]]
 * [[Enumerations and the Switch Decision Statement]]
 * [[Gracefully Handling Exceptions]]
+* [[Understanding Events and Event-Driven Programming]]
 * 
