@@ -9,4 +9,21 @@ tags:
 ![[Pasted image 20240107172916.png]]
 ![[Pasted image 20240107173154.png]]
 
+```c#
+ switch (todo.Status)
+ {
+     case Status.Completed:
+
+         break;
+     case Status.Deleted:
+
+         break;
+     default:
+         break;
+ }
+```
+
+
+
+
 
