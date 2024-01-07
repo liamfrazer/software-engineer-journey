@@ -10,5 +10,8 @@ tags:
 Car myCar = new Car();
 ```
 * Declaring a new car in memory, then creating a new instance of the Car class
-* Each
+* Each time we initialise a class, we would have an object that is separate to all the other Classes within the computer's memory
+* A Class is like a Cookie Cutter, it gives the shape to the object, but not the actual object itself
 
+* The `new` keyword uses the blueprint, in order to create a new instance of Car
+* Car describes the class/the blueprint, we want to work with one instance which we've set in memory as `myCar`
