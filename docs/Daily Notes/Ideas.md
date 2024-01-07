@@ -16,6 +16,9 @@
 * Marketplace would be a website accessible internal + external and be connected to a database both accessible from JS/React & C#
 * First mining run gives you a choice? or gives a defined dino
 * When entering the mine, you're always put at the first level, but should a choice be provided if multiple levels are accessible?
+* Task list of items to do, could be simple like To Do, In progress, Done
+
+
 
 ## Work Ideas
 * Manage .MD files within an application, potentially GIT to follow changes?
