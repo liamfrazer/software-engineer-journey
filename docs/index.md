@@ -135,4 +135,5 @@
 * [[Working with Strings]]
 * [[Working with Dates and Times]]
 * [[Understanding Classes]]
+* [[Static Keyword]]
 * 

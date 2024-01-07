@@ -177,6 +177,9 @@ Car myThirdCar = new Car("Ford", "Escape", 1990, "Pink");
 ```
 ![[Pasted image 20240107120036.png]]
 ![[Pasted image 20240107120102.png]]
+* The implicit default constructor has no input parameters or a method body, but it allows you to make calls and make new instances of classes at Compile Time
+* By defining it yourself, you take control of the process
+
 
 
 
