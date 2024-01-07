@@ -104,6 +104,49 @@ Ford Mustang 1964 Red
 
 * C++ is an unmanaged memory where I may have to memory manage by myself, whereas C# has a garbage selection is managed
 
+```c#
+        static void Main(string[] args)
+        {
+            Car myCar = new Car();
+
+            myCar.Make = "Ford";
+            myCar.Model = "Mustang";
+            myCar.Year = 1969;
+            myCar.Color = "Red";
+
+            Car myOtherCar;
+            myOtherCar = myCar;
+
+            Console.WriteLine("{0} {1} {2} {3}",
+                myOtherCar.Make,
+                myOtherCar.Model,
+                myOtherCar.Year,
+                myOtherCar.Color);
+
+            myOtherCar.Model = "Bronco";
+
+            Console.WriteLine("{0} {1} {2} {3}",
+                myCar.Make,
+                myCar.Model,
+                myCar.Year,
+                myCar.Color);
+
+            Console.ReadLine();
+        }
+```
+```console
+Ford Mustang 1969 Red
+For Bronco 1969 Red
+```
+* While we're reference `myCar` in the second WriteLine, while both `mycar` and `myOtherCar` would appear to be different, they've both pointed to the same point in memory, meaning that changes to the `myOtherCar` variable will have an impact on the original `myCar` variable
+
+* Once we exit outside of the main method, the myCar variable would go out of scope
+* The same if we defined a variable within a different method and set a variable within the Method's scope
+
+* 
+
+
+
 
 
 
