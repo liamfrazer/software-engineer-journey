@@ -19,6 +19,7 @@ Car myCar = new Car();
 ```c#
 private static decimal DetermineMarketValue(Car car)
 ```
-* The uppercase Car corresponds to the name of the Class, the l
+* The uppercase Car corresponds to the name of the Class, the lowercase car is responding to the object, this is an input parameter
 
+* In our scenario, it would make more sense for the DetermineMarketValue method to be a part of the `Car` class, as the class has full access to all the variables/val
 
