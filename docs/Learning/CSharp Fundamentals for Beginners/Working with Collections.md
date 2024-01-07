@@ -75,6 +75,14 @@ Console.WriteLine(myDictionary["1"].Make); // Toyota
             Car car2 = new Car() { Make = "Nissan", Model = "Altima", VIN = "2" };
 ```
 
+```c#
+            // Collection initialization
+            List<Car> myList = new List<Car>() {
+                new Car { Make = "Toyota", Model = "Camry", VIN = "1" },
+                new Car { Make = "Nissan", Model = "Altima", VIN = "2" } };
+```
+
+
 
 
 
