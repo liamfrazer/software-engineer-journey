@@ -154,6 +154,33 @@ For Bronco 1969 Red
 
 * To put any new instance of an object into a valid state
 
+* Similar to methods, we can create overloaded constructors
+
+```c#
+    public Car()
+    {
+        // You could load from a configuration file, such as a database.
+        Make = "Nissan";
+    }
+
+    public Car(string make, string model, int year, string color)
+    {
+        Make = make;
+        Model = model;
+        Year = year;
+        Color = color;
+    }
+}
+```
+```c#
+Car myThirdCar = new Car("Ford", "Escape", 1990, "Pink");
+```
+![[Pasted image 20240107120036.png]]
+![[Pasted image 20240107120102.png]]
+
+
+
+
 
 
 
