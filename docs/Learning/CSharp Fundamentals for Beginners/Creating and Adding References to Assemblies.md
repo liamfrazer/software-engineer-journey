@@ -8,13 +8,35 @@ tags:
 
 ![[Pasted image 20240107135511.png]]
 ```c#
+using System.Net;
+
 namespace MyCodeLibrary
 {
-    public class Class1
+    public class Scrape
     {
+        public string ScrapeWebPage(string url)
+        {
+            return GetWebPage(url);
+        }
 
+        public string ScrapWebpage(string url, string filepath)
+        {
+            string html = GetWebPage(url);
+            File.WriteAllText(filepath, html);
+            return html;
+        }
+
+        private string GetWebPage(string url)
+        {
+            WebClient client = new WebClient();
+            return client.DownloadString(url);
+        }
     }
 }
 ```
+* Building a Custom Class Library
+
+
+
 
 
