@@ -149,8 +149,10 @@ For Bronco 1969 Red
 
 * We're calling a `constructor` method whenever we're creating a new instant of a class
 * They're typically used to put the new object into a valid state
-* 
 
+* The `.this` keyword is optional, it refers to this instance of the object and helps clarify where the variable is associated to.
+
+* To put any new instance of an object into a valid state
 
 
 
