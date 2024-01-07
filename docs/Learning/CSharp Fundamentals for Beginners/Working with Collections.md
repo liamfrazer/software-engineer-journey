@@ -68,6 +68,16 @@ myDictionary.Add(carTwo.VIN, carTwo);
 Console.WriteLine(myDictionary["1"].Make); // Toyota
 ```
 
+* Initialising a Dictionary at it's creation point with object initialization
+* We've created a new variable called `car`, we've created a new instance of the `Car` class within the computer's memory, and then we've populated the Car object at the moment of creation
+```c#
+            Car car1 = new Car() {Make = "Toyota", Model = "Camry", VIN = "1" };
+            Car car2 = new Car() { Make = "Nissan", Model = "Altima", VIN = "2" };
+```
+
+
+
+
 
 
 
