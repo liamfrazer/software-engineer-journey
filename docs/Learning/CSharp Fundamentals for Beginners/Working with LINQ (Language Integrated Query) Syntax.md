@@ -72,6 +72,41 @@ var orderedCars = myCars.OrderByDescending(p => p.Year);
 2015 Nissan Rogue E5
 ```
 
+```c#
+            var firstBMW = myCars.First(p => p.Make == "BMW");
+            Console.WriteLine(firstBMW.VIN);
+```
+```console
+A1
+```
+
+```c#
+            var firstBMW = myCars.OrderByDescending(p => p.Year).First(p => p.Make == "BMW");
+            Console.WriteLine(firstBMW.VIN);
+```
+```console
+C3
+```
+
+```c#
+Console.WriteLine(myCars.TrueForAll(p => p.Year > 2012)); // True
+```
+```c#
+Console.WriteLine(myCars.TrueForAll(p => p.Year > 2020)); // False
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

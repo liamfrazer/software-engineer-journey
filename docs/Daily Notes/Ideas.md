@@ -11,6 +11,8 @@
 ## Game Ideas
 * Environment is impacted by spells (e.g things set on fire if hit by a fire spell)
 * Replace the functionality of a spell with a dino instead
+* Weapons that I'm holding (as I can't do much else) could benefit the Dino's powers
+* 
 
 ## Work Ideas
 * Manage .MD files within an application, potentially GIT to follow changes?
