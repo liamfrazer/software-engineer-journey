@@ -143,7 +143,7 @@ For Bronco 1969 Red
 * Once we exit outside of the main method, the myCar variable would go out of scope
 * The same if we defined a variable within a different method and set a variable within the Method's scope
 
-* 
+![[Pasted image 20240107113948.png]]
 
 
 
