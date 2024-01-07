@@ -12,7 +12,9 @@
 * Environment is impacted by spells (e.g things set on fire if hit by a fire spell)
 * Replace the functionality of a spell with a dino instead
 * Weapons that I'm holding (as I can't do much else) could benefit the Dino's powers
-* 
+* Mining events could take place that I need protection from
+* Marketplace would be a website accessible internal + external and be connected to a database both accessible from JS/React & C#
+* First mining run gives you a choice? or gives a defined dino
 
 ## Work Ideas
 * Manage .MD files within an application, potentially GIT to follow changes?

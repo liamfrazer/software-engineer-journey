@@ -94,6 +94,16 @@ Console.WriteLine(myCars.TrueForAll(p => p.Year > 2012)); // True
 ```c#
 Console.WriteLine(myCars.TrueForAll(p => p.Year > 2020)); // False
 ```
+```c#
+myCars.ForEach(i => Console.WriteLine("{0} {1}",i.Make, i.Model));
+```
+```console
+
+```
+
+
+
+
 
 
 
