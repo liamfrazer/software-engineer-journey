@@ -98,6 +98,11 @@ Ford Mustang 1964 Red
 £2,000.00
 ```
 
+* We're storing values in that bucket, use the reference `myCar` as a handle to that bucket
+* Once that handle is dropped, the bucket will no longer be accessible.
+* The DotNet framework monitors the memory that it manages, looking for objects that no longer have any handles, the reference count will go to 0, meaning that this is part of the garbage collection
+
+* C++ is an unmanaged memory where I may have to memory manage by myself, whereas C# has a garbage selection is managed
 
 
 
