@@ -36,6 +36,28 @@ namespace MyCodeLibrary
 ```
 * Building a Custom Class Library
 
+```c#
+
+using MyCodeLibrary;
+
+namespace Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Scrape myScrape = new Scrape();
+            string value = myScrape.ScrapeWebPage("http://google.com");
+            Console.WriteLine(value);
+            Console.ReadLine();
+        }
+    }
+}
+```
+* Using that Custom Class Library within another application
+
+
+
 
 
 
