@@ -97,5 +97,26 @@ namespace Program
 * `l` is not accessible as it was being declared within the `for loop` statement above
 
 * private and public are related to encapsulation
-* 
+* private means that a method can be called by any other method within the same class
+* A public method is then called outside of the given class
+* Private methods are only called within side the clas
+
+```c#
+class Car
+{
+    public void DoSomething()
+    {
+        Console.WriteLine(helperMethod());
+    }
+
+    private string helperMethod()
+    {
+        return "Hello World";
+    }
+}
+```
+![[Pasted image 20240107124703.png]]
+* The consumer of the `Car` cla
+
+
 
