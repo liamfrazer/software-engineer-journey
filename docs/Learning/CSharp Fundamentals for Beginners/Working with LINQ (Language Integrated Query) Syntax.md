@@ -146,6 +146,44 @@ System.Collections.Generic.List`1[Program.Car]
 System.Linq.OrderedEnumerable`2[Program.Car,System.Int32]
 ```
 
+```c#
+            Console.WriteLine(myCars.GetType());
+            var orderedCars = myCars.OrderByDescending(p => p.Year);
+            Console.WriteLine(orderedCars.GetType());
+
+            var bmws = myCars.Where(p => p.Make == "BMW");
+            Console.WriteLine(bmws.GetType());
+```
+```console
+System.Collections.Generic.List`1[Program.Car]
+System.Linq.OrderedEnumerable`2[Program.Car,System.Int32]
+System.Linq.Enumerable+WhereListIterator`1[Program.Car]
+```
+
+* The var keyword helps us create complex queries without worrying about the data types that are returned
+
+* A projection can be made that in our example, can take certain values or certain properties of a car, projecting them into a new datatype, without being defined and as a anonymous type 
+
+
+```c#
+            var newCars = from car in myCars
+                       where car.Make == "BMW"
+                       && car.Year == 2016
+                       select new { car.Make, car.Model };
+
+            Console.WriteLine(newCars.GetType());
+```
+```console
+System.Linq.Enumerable+WhereSelectListIterator`2[Program.Car,<>f__AnonymousType0`2[System.String,System.String]]
+```
+
+* There is a lot going on under the bonnet with LINQ, but defining the types with `var` helps massively as the
+
+
+
+
+
+
 
 
 
