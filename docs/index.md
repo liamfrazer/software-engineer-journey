@@ -13,24 +13,24 @@
 * [[Your Knowledge Portfolio]]
 
 ### Ultralearning
-#### Principle 1 - Metalearning: First Draw a Map
+#### Metalearning: First Draw a Map
 * [[Metalearning]]
-#### Principle 3 - Directness: Go Straight Ahead
+#### Directness: Go Straight Ahead
 * [[How to Learn Directly]]
 * [[Learn Straight From The Source]]
-#### Principle 4 - Drill: Attack Your Weakest Point
+#### Drill: Attack Your Weakest Point
 * [[Drills and Cognitive Load]]
 * [[Direct then Drill Approach]]
 * [[Tactics for Designing Drills]]
-#### Principle 5 - Retrieval: Test to Learn
+#### Retrieval: Test to Learn
 * [[How to Practice retrieval]]
 * [[What should be Retrieved]]
-#### Principle 7 - Retention: Don't Fill a Leaky Bucket
+#### Retention: Don't Fill a Leaky Bucket
 * [[Why is it so hard to remember things]]
-#### Principle 8 - Intuition: Dig Deep before Building Up
+#### Intuition: Dig Deep before Building Up
 * [[How to Build Your Intuition]]
 * [[The Feynman Technique]]
-#### Principle 9 - Experimentation: Explore Outside Your Comfort Zone
+#### Experimentation: Explore Outside Your Comfort Zone
 * [[Experimentation is Key to Mastery]]
 * [[The Mindset of Experimentation]]
 #### [[Your First UltraLearning Project]]
