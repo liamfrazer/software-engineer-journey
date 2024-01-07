@@ -147,7 +147,9 @@ For Bronco 1969 Red
 
 
 
-
+* We're calling a `constructor` method whenever we're creating a new instant of a class
+* They're typically used to put the new object into a valid state
+* 
 
 
 
