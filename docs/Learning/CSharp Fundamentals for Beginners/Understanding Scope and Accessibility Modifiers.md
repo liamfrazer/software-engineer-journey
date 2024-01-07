@@ -116,7 +116,12 @@ class Car
 }
 ```
 ![[Pasted image 20240107124703.png]]
-* The consumer of the `Car` cla
+* The consumer of the `Car` classes doesn't know that the `helperMethod` doesn't exist
+* It only uses and makes the `DoSomething` method available
+* We typically want to hide the implementation via encapsulation.
+* Public method should be obvious and simple, while the internals should be Private
+* This helps remove ambiguity and provide a cleaner interface
+
 
 
 

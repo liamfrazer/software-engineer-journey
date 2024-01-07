@@ -137,4 +137,5 @@
 * [[Understanding Classes]]
 * [[Static Keyword]]
 * [[Understanding Scope and Accessibility Modifiers]]
+* [[Understanding Namespaces and Working with the .NET Class Library]]
 * 
