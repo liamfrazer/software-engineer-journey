@@ -140,4 +140,5 @@
 * [[Understanding Namespaces and Working with the .NET Class Library]]
 * [[Creating and Adding References to Assemblies]]
 * [[Working with Collections]]
+* [[ Working with LINQ (Language Integrated Query) Syntax]]
 * 
