@@ -129,6 +129,31 @@ Ford Escape £29,000.00
 Nissan Rogue £35,000.00
 ```
 
+```c#
+Console.WriteLine(myCars.Exists(i => i.Model == "Rogue")); // True
+```
+```c#
+Console.WriteLine(myCars.Sum(i => i.StickerPrice)); // 185000
+```
+
+```c#
+            Console.WriteLine(myCars.GetType());
+            var orderedCars = myCars.OrderByDescending(p => p.Year);
+            Console.WriteLine(orderedCars.GetType());
+```
+```console
+System.Collections.Generic.List`1[Program.Car]
+System.Linq.OrderedEnumerable`2[Program.Car,System.Int32]
+```
+
+
+
+
+
+
+
+
+
 
 
 
