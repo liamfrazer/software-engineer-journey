@@ -45,7 +45,10 @@ class Car
 Called the static MyMethod
 ```
 
-* There is a di
+* There is a difference between static members and instance members.
+* Properties describing a single instance of the car, whereas a static member aren't per instance, they're more utilities and can be called at any time and don't depend on a single state of the class and can be used at any time
+
+
 
 
 
