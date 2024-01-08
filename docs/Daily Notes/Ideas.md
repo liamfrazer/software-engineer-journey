@@ -17,6 +17,7 @@
 * First mining run gives you a choice? or gives a defined dino
 * When entering the mine, you're always put at the first level, but should a choice be provided if multiple levels are accessible?
 * Task list of items to do, could be simple like To Do, In progress, Done
+* 
 
 
 
