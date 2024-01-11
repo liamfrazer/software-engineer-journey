@@ -2,6 +2,7 @@
 
 ## Code Concepts
 * [[Promises]]
+* [[Classes]]
 * 
 
 ## Books
