@@ -9,3 +9,13 @@ tags:
 
 * `transform` is accessing the transform of the game object we're currently on
 * `Translate` is a built in Unity method 
+
+```c#
+    void Start()
+    {
+        transform.Translate(1, 0, 0);
+    }
+```
+
+* Moving this to update would run the script above would run on every frame
+
