@@ -154,4 +154,5 @@
 * [[Start() and Update()]]
 * [[Variables]]
 * [[Using SerializedField]]
+* [[Input.GetAxis()]]
 * 

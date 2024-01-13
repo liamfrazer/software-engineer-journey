@@ -1,0 +1,6 @@
+---
+tags:
+  - csharp
+---
+# Input.GetAxis()
+
