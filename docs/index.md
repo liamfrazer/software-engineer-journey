@@ -152,4 +152,5 @@
 
 ### Complete CSharp Unity Game Developer 3D
 * [[Start() and Update()]]
+* [[Variables]]
 * 
