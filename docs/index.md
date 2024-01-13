@@ -156,4 +156,5 @@
 * [[Using SerializedField]]
 * [[Input.GetAxis()]]
 * [[Time.deltaTime]]
+* [[Cinemachine Follow Camera]]
 * 
