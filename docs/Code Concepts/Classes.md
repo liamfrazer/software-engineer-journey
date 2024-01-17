@@ -43,7 +43,11 @@ const total = product1.calculateTotal(salesTax);
 console.log(`Total Price: (with ${salesTax * 100}% Tax): $${total.toFixed(2)}`);
 
 
-//Product: Shirt, {}
+// Product: Shirt, Price: $19.99
+// Product: Pants, Price: $22.50
+// Product: Boxers, Price: $24.99
+
+// Total Price: (with 5% Tax): $20.99
 
 ```
 
