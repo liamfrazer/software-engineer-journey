@@ -9,4 +9,5 @@ tags:
 
 * Classes are am ES6 feature that provide a more structured and cleaner way to work with object.
 * Cleaner than traditional constructor functions
+* Helpful for static keyword, encapsulation, iheritence
 
