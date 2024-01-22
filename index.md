@@ -160,4 +160,6 @@
 * [[Basic Collisions]]
 * [[Introduction to Method]]
 * [[Using OnCollisionEnter()]]
+* [[Using GetComponent]]
+* 
 * 

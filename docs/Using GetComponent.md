@@ -1,0 +1,6 @@
+---
+tags:
+  - csharp
+---
+# Using GetComponent
+	
