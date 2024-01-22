@@ -161,5 +161,5 @@
 * [[Introduction to Method]]
 * [[Using OnCollisionEnter()]]
 * [[Using GetComponent]]
-* 
+* [[Incrementing a Score]]
 * 
