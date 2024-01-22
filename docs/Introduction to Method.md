@@ -34,6 +34,23 @@ bool CleanYourRoom(int time)
 * Start() and Update() are called by Unity's internal logic which is taking care of calling them for us at the right time
 * Start() and Update() are referred to as callbacks
 
+```c#
+	void Start()
+   {
+       PrintInstructions();
+   }
+    
+    void PrintInstructions()
+    {
+        Debug.Log("Welcome to the game");
+        Debug.Log("Move with WASD or arrow keys");
+        Debug.Log("Don't hit the walls");
+    }
+```
+
+![[Pasted image 20240122201139.png]]
+
+
 
 
 
