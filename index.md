@@ -162,4 +162,5 @@
 * [[Using OnCollisionEnter()]]
 * [[Using GetComponent]]
 * [[Incrementing a Score]]
+* [[Using time.time]]
 * 
