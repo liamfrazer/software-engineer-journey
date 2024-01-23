@@ -166,4 +166,5 @@
 * [[if Statements]]
 * [[Caching a Reference]]
 * [[Using Tags]]
+* [[Rotate an Object]]
 * 
