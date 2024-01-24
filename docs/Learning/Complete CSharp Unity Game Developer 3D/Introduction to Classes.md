@@ -22,3 +22,9 @@ tags:
 * "need to know" level of access
 * E.g Don't let everything access everything else
 * Only methods in our Movement class can alter our player's movement speed
+
+
+## Classes already built for us
+* Unity has many classes already created
+* We write the class name then use the dot operator to access things within that class
+* 
