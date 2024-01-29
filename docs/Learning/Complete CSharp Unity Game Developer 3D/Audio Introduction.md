@@ -12,3 +12,9 @@ tags:
 * Audio Listener - To 'hear' the audio
 
 
+* Listener is normally always on the main camera
+
+![[Pasted image 20240129174120.png]]
+![[Pasted image 20240129174157.png]]
+
+
