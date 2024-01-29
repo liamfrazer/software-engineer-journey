@@ -6,6 +6,7 @@ tags:
 ---
 # SceneManager
 
+## Respawn
 ![[Pasted image 20240129182608.png]]
 
 ```c#
@@ -43,5 +44,7 @@ public class CollisionHandler : MonoBehaviour
     }
 }
 ```
+![[Pasted image 20240129184207.png]]
 
+## Load Next Level
 
