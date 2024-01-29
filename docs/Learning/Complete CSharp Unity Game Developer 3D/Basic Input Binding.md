@@ -1,6 +1,9 @@
 ---
 tags:
   - csharp
+  - Unity
+  - input
+  - binding
 ---
 # Basic Input Binding
 ```c#

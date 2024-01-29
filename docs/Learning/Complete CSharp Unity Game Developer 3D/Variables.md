@@ -1,6 +1,8 @@
 ---
 tags:
   - csharp
+  - Unity
+  - variables
 ---
 # Variables
 

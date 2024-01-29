@@ -1,6 +1,8 @@
 ---
 tags:
   - csharp
+  - SerializedField
+  - Unity
 ---
 # Using SerializedField
 * Changing a value in the inspector doesn't change the value within the script

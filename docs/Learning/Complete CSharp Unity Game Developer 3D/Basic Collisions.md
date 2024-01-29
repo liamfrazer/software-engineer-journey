@@ -2,6 +2,7 @@
 tags:
   - csharp
   - Collision
+  - Unity
 ---
 # Basic Collisions
 ![[Pasted image 20240113175431.png]]
