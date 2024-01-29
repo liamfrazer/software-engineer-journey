@@ -171,4 +171,5 @@
 * [[Basic Input Binding]]
 * [[Obstacle hitting bug]]
 * [[Audio Introduction]]
+* [[Switch Statements]]
 * 

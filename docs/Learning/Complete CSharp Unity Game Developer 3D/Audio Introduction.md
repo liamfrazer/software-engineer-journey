@@ -18,3 +18,38 @@ tags:
 ![[Pasted image 20240129174157.png]]
 
 
+```c#
+AudioSource audioSource;
+
+void start()
+{
+	audioSource = GetComponent<AudioSource>();
+}
+```
+
+```c#
+ private void ProcessThrust()
+ {
+     if (Input.GetKey(KeyCode.Space))
+     {
+         rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
+         if (!audioSource.isPlaying)
+         {
+             audioSource.Play();
+         }
+
+     }
+     else
+     {
+         audioSource.Stop();
+     }
+
+ }
+```
+
+
+
+
+
+
+
