@@ -169,4 +169,5 @@
 * [[Rotate an Object]]
 * [[Introduction to Classes]]
 * [[Basic Input Binding]]
+* [[Obstacle hitting bug]]
 * 
