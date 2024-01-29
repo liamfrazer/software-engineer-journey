@@ -175,4 +175,5 @@
 * [[SceneManager]]
 * [[Using Invoke]]
 * [[Order of Variables]]
+* [[Bool Variable for State]]
 * 
