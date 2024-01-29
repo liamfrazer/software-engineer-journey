@@ -172,4 +172,5 @@
 * [[Obstacle hitting bug]]
 * [[Audio Introduction]]
 * [[Switch Statements]]
+* [[Respawn using SceneManager]]
 * 
