@@ -5,3 +5,13 @@ tags:
   - state
 ---
 # Bool Variable for State
+
+```c#
+    bool isTransitioning;
+```
+
+
+
+
+
+
