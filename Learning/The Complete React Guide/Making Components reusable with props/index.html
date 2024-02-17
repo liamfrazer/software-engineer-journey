@@ -1,0 +1,4304 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documenting my Software Engineer Journey">
+      
+      
+        <meta name="author" content="Liam">
+      
+      
+        <link rel="canonical" href="https://liamfrazer.github.io/software-engineer-journey/Learning/The%20Complete%20React%20Guide/Making%20Components%20reusable%20with%20props/">
+      
+      
+        <link rel="prev" href="../Lifting%20State%20Up/">
+      
+      
+        <link rel="next" href="../Managing%20State%20and%20Using%20Hooks/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Making Components reusable with props - Software Engineer Journey</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#making-components-reusable-with-props" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Software Engineer Journey" class="md-header__button md-logo" aria-label="Software Engineer Journey" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Software Engineer Journey
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Making Components reusable with props
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/liamfrazer/software-engineer-journey" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    liamfrazer/software-engineer-journey
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Software Engineer Journey" class="md-nav__button md-logo" aria-label="Software Engineer Journey" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Software Engineer Journey
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/liamfrazer/software-engineer-journey" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    liamfrazer/software-engineer-journey
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Books
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Books
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    The Creative Act   A Way of Being
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            The Creative Act   A Way of Being
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/The%20Creative%20Act%20-%20A%20Way%20of%20Being/The%20Seed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Seed
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/The%20Creative%20Act%20-%20A%20Way%20of%20Being/Try%20Everything/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Try Everything
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    The Pragmatic Programmer
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            The Pragmatic Programmer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/The%20Pragmatic%20Programmer/Software%20Entropy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Entropy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/The%20Pragmatic%20Programmer/The%20Cat%20ate%20my%20Source%20Code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Cat ate my Source Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/The%20Pragmatic%20Programmer/Tips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tips
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/The%20Pragmatic%20Programmer/What%20Makes%20a%20Pragmatic%20Programmer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What Makes a Pragmatic Programmer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/The%20Pragmatic%20Programmer/Your%20Knowledge%20Portfolio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Your Knowledge Portfolio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ultralearning
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ultralearning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/Ultralearning/Ask%20Yourself%20These%20Questions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ask Yourself These Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/Ultralearning/Direct%20then%20Drill%20Approach/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Direct then Drill Approach
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/Ultralearning/Drills%20and%20Cognitive%20Load/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Drills and Cognitive Load
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/Ultralearning/Experimentation%20is%20Key%20to%20Mastery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Experimentation is Key to Mastery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/Ultralearning/How%20to%20Build%20Your%20Intuition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Build Your Intuition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/Ultralearning/How%20to%20Learn%20Directly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Learn Directly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/Ultralearning/How%20to%20Practice%20retrieval/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Practice retrieval
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/Ultralearning/Learn%20Straight%20From%20The%20Source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learn Straight From The Source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/Ultralearning/Metalearning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metalearning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/Ultralearning/Tactics%20for%20Designing%20Drills/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tactics for Designing Drills
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/Ultralearning/The%20Feynman%20Technique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Feynman Technique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/Ultralearning/The%20Mindset%20of%20Experimentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Mindset of Experimentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/Ultralearning/What%20should%20be%20Retrieved/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What should be Retrieved
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/Ultralearning/Why%20is%20it%20so%20hard%20to%20remember%20things/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why is it so hard to remember things
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/Ultralearning/Your%20First%20UltraLearning%20Project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Your First UltraLearning Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Code Concepts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Code Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Code%20Concepts/Classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Classes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Code%20Concepts/Promises/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Promises
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Daily Notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Daily Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Daily%20Notes/2024-01-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024 01 02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Daily%20Notes/2024-01-03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024 01 03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Daily%20Notes/2024-01-04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024 01 04
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Daily%20Notes/2024-01-08/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024 01 08
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Daily%20Notes/2024-01-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024 01 10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Daily%20Notes/2024-01-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024 01 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Daily%20Notes/2024-01-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024 01 17
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Daily%20Notes/2024-01-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024 01 18
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Daily%20Notes/2024-02-01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024 02 01
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Daily%20Notes/2024-02-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024 02 17
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Daily%20Notes/Ideas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ideas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Learning
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AI SaaS Chat Bot
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            AI SaaS Chat Bot
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI%20SaaS%20Chat%20Bot/Axios%20-%20Sending%20the%20API%20Request%20from%20React%20to%20Express/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Axios - Sending the API Request from React to Express
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI%20SaaS%20Chat%20Bot/Build%20a%20Secure%20Authentication%20with%20Tokens%20and%20HTTP-only%20signed%20cookies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build a Secure Authentication with Tokens and HTTP-only signed cookies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI%20SaaS%20Chat%20Bot/Building%20the%20React%20Front%20end%20for%20OpenAI%20ChatGPT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building the React Front end for OpenAI ChatGPT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI%20SaaS%20Chat%20Bot/Chat%20Route%20to%20see%20previous%20chat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chat Route to see previous chat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI%20SaaS%20Chat%20Bot/Clear%20Conversation%20Functionality/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clear Conversation Functionality
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI%20SaaS%20Chat%20Bot/Enabling%20Protected%20Routes%20within%20the%20Front%20End/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enabling Protected Routes within the Front End
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI%20SaaS%20Chat%20Bot/Integrate%20MongoDB%20Database%20Connection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Integrate MongoDB Database Connection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI%20SaaS%20Chat%20Bot/Integrating%20the%20User%20Messages%20to%20the%20Backend/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Integrating the User Messages to the Backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI%20SaaS%20Chat%20Bot/Login%20Page%20and%20handling%20form%20data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Login Page and handling form data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI%20SaaS%20Chat%20Bot/Setting%20up%20the%20Front%20End/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up the Front End
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI%20SaaS%20Chat%20Bot/Setup%20Node%20Express%20App%20with%20TypeScript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup Node Express App with TypeScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI%20SaaS%20Chat%20Bot/Using%20the%20OpenAI%20ChatGPT%203.5%20API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using the OpenAI ChatGPT 3.5 API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI%20SaaS%20Chat%20Bot/useEffect%28%29%20to%20auto-login%20if%20authenticated/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    useEffect() to auto-login if authenticated
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CSharp Fundamentals for Beginners
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            CSharp Fundamentals for Beginners
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Creating%20and%20Adding%20References%20to%20Assemblies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating and Adding References to Assemblies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Creating%20your%20first%20CSharp%20Application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating your first CSharp Application
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Defining%20and%20Calling%20Methods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Defining and Calling Methods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Enumerations%20and%20the%20Switch%20Decision%20Statement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enumerations and the Switch Decision Statement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/For%20Iteration%20Statement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    For Iteration Statement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Gracefully%20Handling%20Exceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gracefully Handling Exceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Operators%2C%20Expressions%20and%20Statements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Operators, Expressions and Statements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Static%20Keyword/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Static Keyword
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/The%20IF%20Decision%20Statement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The IF Decision Statement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Understanding%20Arrays/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding Arrays
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Understanding%20Classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding Classes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Understanding%20Data%20Types%20and%20Variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding Data Types and Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Understanding%20Events%20and%20Event-Driven%20Programming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding Events and Event-Driven Programming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Understanding%20Namespaces%20and%20Working%20with%20the%20.NET%20Class%20Library/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding Namespaces and Working with the .NET Class Library
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Understanding%20Scope%20and%20Accessibility%20Modifiers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding Scope and Accessibility Modifiers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/While%20Iteration%20Statement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    While Iteration Statement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Working%20with%20Collections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Collections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Working%20with%20Dates%20and%20Times/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Dates and Times
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Working%20with%20LINQ%20%28Language%20Integrated%20Query%29%20Syntax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with LINQ (Language Integrated Query) Syntax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CSharp%20Fundamentals%20for%20Beginners/Working%20with%20Strings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Strings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Complete CSharp Unity Game Developer 3D
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Complete CSharp Unity Game Developer 3D
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Audio%20Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Audio Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Basic%20Collisions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Collisions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Basic%20Input%20Binding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Input Binding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Bool%20Variable%20for%20State/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bool Variable for State
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Caching%20a%20Reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Caching a Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Cinemachine%20Follow%20Camera/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cinemachine Follow Camera
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Incrementing%20a%20Score/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Incrementing a Score
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Input.GetAxis%28%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Input.GetAxis()
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Introduction%20to%20Classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Classes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Introduction%20to%20Method/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Method
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Obstacle%20hitting%20bug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obstacle hitting bug
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Order%20of%20Variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Order of Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Rotate%20an%20Object/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rotate an Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/SceneManager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SceneManager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Start%28%29%20and%20Update%28%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start() and Update()
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Switch%20Statements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Switch Statements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Time.deltaTime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Time.deltaTime
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Using%20GetComponent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using GetComponent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Using%20Invoke/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Invoke
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Using%20OnCollisionEnter%28%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using OnCollisionEnter()
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Using%20SerializedField/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using SerializedField
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Using%20Tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Tags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Using%20time.time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using time.time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/Variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complete%20CSharp%20Unity%20Game%20Developer%203D/if%20Statements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    if Statements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    The Complete React Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            The Complete React Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Avoid%20Intersection%20States/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Avoid Intersection States
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Building%20Blocks%20for%20Tic%20Tac%20Toe%20Project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Blocks for Tic Tac Toe Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CSS%20Styling%20and%20Dynamic%20Styling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS Styling and Dynamic Styling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Component%20Composition%20-%20The%20Special%20Children%20Prop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Component Composition - The Special Children Prop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Concept%20Repetition%20-%20Working%20with%20State/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Concept Repetition - Working with State
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Control%20Structures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Control Structures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating%20Components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Components
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Default%20Prop%20Values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Default Prop Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Defining%20Functions%20Inside%20of%20Functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Defining Functions Inside of Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Deriving%20State%20From%20Props/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deriving State From Props
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Deriving%20and%20Outputting%20Data%20Based%20on%20State/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deriving and Outputting Data Based on State
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Destructuring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Destructuring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Detaching%20DOM%20Rendering%20from%20JSX%20Structure%20with%20Portals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Detaching DOM Rendering from JSX Structure with Portals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Disabling%20Buttons%20Conditionally/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disabling Buttons Conditionally
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Dynamic%20and%20Conditional%20Styling%20with%20CSS%20files%20and%20CSS%20Classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dynamic and Conditional Styling with CSS files and CSS Classes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Exposing%20%20Component%20APIs%20via%20the%20useImperativeHandle%20Hook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exposing  Component APIs via the useImperativeHandle Hook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Forwarding%20Props%20to%20Wrapped%20Elements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forwarding Props to Wrapped Elements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Forwarding%20Refs%20to%20Custom%20Components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forwarding Refs to Custom Components
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How%20Not%20to%20Update%20the%20UI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Not to Update the UI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Identifying%20Unnecessary%20State/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Identifying Unnecessary State
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lifting%20State%20Up/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lifting State Up
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Making Components reusable with props
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Making Components reusable with props
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#default-prop-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default prop values
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Managing%20State%20and%20Using%20Hooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing State and Using Hooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Outputting%20Dynamic%20Content%20in%20JSX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outputting Dynamic Content in JSX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Outputting%20List%20Data%20Dynamically/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outputting List Data Dynamically
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Passing%20Custom%20Arguments%20to%20Event%20Functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Passing Custom Arguments to Event Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Passing%20Functions%20as%20values%20to%20Props/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Passing Functions as values to Props
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Project%20Management%20App/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Management App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Project%20Management%20Test%20App/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Management Test App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Props%20are%20not%20Forwarded%20to%20Inner%20Elements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Props are not Forwarded to Inner Elements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Reacting%20to%20Events/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reacting to Events
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Reference%20vs%20Primitive%20Values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reference vs Primitive Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Refs%20vs%20State%20Values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Refs vs State Values
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rendering%20Content%20Conditionally/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rendering Content Conditionally
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rendering%20Multi-dimensional%20Lists/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rendering Multi-dimensional Lists
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Scoping%20CSS%20Rules%20with%20CSS%20Modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scoping CSS Rules with CSS Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Setting%20Component%20Types%20Dynamically/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Component Types Dynamically
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Setting%20HTML%20and%20Loading%20Images/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting HTML and Loading Images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Setting%20Timers%20and%20Managing%20State/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting Timers and Managing State
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Special%20Projects%20Folders/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Special Projects Folders
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Splitting%20Components%20by%20Feature%20and%20State/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Splitting Components by Feature and State
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Storing%20Components%20and%20Good%20Project%20Structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Storing Components and Good Project Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Styling%20React%20apps%20with%20Inline%20Styles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Styling React apps with Inline Styles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../The%20Spread%20Operator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Spread Operator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Understanding%20React%20Error%20Messages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding React Error Messages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Updating%20Object%20State%20Immutably/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Object State Immutably
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Updating%20State%20Based%20on%20Old%20State%20Correctly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating State Based on Old State Correctly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User%20Input%20and%20Two%20Way%20Binding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Input and Two Way Binding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using%20Functions%20as%20Values/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Functions as Value
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vanilla%20CSS%20Styles%20are%20NOT%20Scoped/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vanilla CSS Styles are NOT Scoped
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vanilla%20CSS%20in%20React/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vanilla CSS in React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../What%20are%20Refs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What are Refs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Why%20Use%20React/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why Use React
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Working%20with%20Fragments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Fragments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Working%20with%20Multiple%20JSX%20Slots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Multiple JSX Slots
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../You%20Don%27t%20have%20to%20use%20JSX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    You Don't have to use JSX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../array%20and%20array%20methods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    array and array methods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions%20and%20parameters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    functions and parameters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../import%20and%20export/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    import and export
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../objects%20and%20classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    objects and classes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#default-prop-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default prop values
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="making-components-reusable-with-props">Making Components reusable with props<a class="headerlink" href="#making-components-reusable-with-props" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Main advantage of components is that they're reusable</li>
+<li>
+<p>You can reuse React components, but you don't have to.</p>
+</li>
+<li>
+<p>Like we can use functions with different data, we can also use components with different data</p>
+</li>
+<li>
+<p>React allows you to pass data to components via a concept called <code>Props</code></p>
+</li>
+<li>
+<p>JSX Code that uses a Component &gt; Set Props &gt; Component &gt; Receive Props &gt; Component Function</p>
+</li>
+<li>
+<p>JSX Code that uses a Component</p>
+<ul>
+<li>Set component input data via "custom HTML attributes (props)"</li>
+</ul>
+</li>
+<li>Component<ul>
+<li>Defines internal logic + JSX code that should be rendered</li>
+</ul>
+</li>
+<li>
+<p>Component Function</p>
+<ul>
+<li>Receives props with parameter with configuration data</li>
+</ul>
+</li>
+<li>
+<p>You're not limited to values when passing props.</p>
+</li>
+<li>String/Number/Array/Object</li>
+<li>props is the name typically chosen</li>
+<li>Props will be set by React, as React will execute the function, we're using them as HTML elements</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">                        </span><span class="p">&lt;</span><span class="nt">CoreConcept</span>
+<span class="w">                            </span><span class="na">title</span><span class="o">=</span><span class="s">&quot;Components&quot;</span>
+<span class="w">                            </span><span class="na">description</span><span class="o">=</span><span class="s">&quot;The Core UI building block.&quot;</span>
+<span class="w">                            </span><span class="na">image</span><span class="o">=</span><span class="p">{</span><span class="nx">componentsImg</span><span class="p">}</span>
+<span class="w">                        </span><span class="p">/&gt;</span>
+<span class="w">                        </span><span class="p">&lt;</span><span class="nt">CoreConcept</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">                        </span><span class="p">&lt;</span><span class="nt">CoreConcept</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">                        </span><span class="p">&lt;</span><span class="nt">CoreConcept</span><span class="w"> </span><span class="p">/&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">CoreConcept</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">&lt;</span><span class="nt">img</span><span class="w"> </span><span class="na">src</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">image</span><span class="p">}</span><span class="w"> </span><span class="na">alt</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">            </span><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;{</span><span class="nx">props</span><span class="p">.</span><span class="nx">title</span><span class="p">}&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;{</span><span class="nx">props</span><span class="p">.</span><span class="nx">description</span><span class="p">}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><img alt="Pasted image 20231216104945.png" src="../../../attachments/Pasted%20image%2020231216104945.png" /></p>
+<ul>
+<li>PropTypes</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">PropTypes</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;prop-types&quot;</span><span class="p">;</span>
+
+<span class="nx">CoreConcept</span><span class="p">.</span><span class="nx">propTypes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="nx">PropTypes</span><span class="p">.</span><span class="nx">string</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="nx">PropTypes</span><span class="p">.</span><span class="nx">string</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">image</span><span class="o">:</span><span class="w"> </span><span class="nx">PropTypes</span><span class="p">.</span><span class="nx">string</span><span class="p">,</span>
+<span class="p">};</span>
+</code></pre></div>
+<ul>
+<li>
+<p>Thanks to props, is that the component is re-usable</p>
+</li>
+<li>
+<p>We can use a shorthand spread operator to pull out all the key value pairs of an object.</p>
+</li>
+<li>By using the spread operator, key value pairs of the object can be added as key value pairs to the component as props.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">App</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">&lt;</span><span class="nt">Header</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">            </span><span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+<span class="w">                </span><span class="p">&lt;</span><span class="nt">section</span><span class="w"> </span><span class="na">id</span><span class="o">=</span><span class="s">&quot;core-concepts&quot;</span><span class="p">&gt;</span>
+<span class="w">                    </span><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="nx">Core</span><span class="w"> </span><span class="nx">Concepts</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="w">                    </span><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="w">                        </span><span class="p">&lt;</span><span class="nt">CoreConcept</span><span class="w"> </span><span class="p">{</span><span class="na">...CORE_CONCEPTS</span><span class="err">[</span><span class="na">0</span><span class="err">]</span><span class="p">}</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">                        </span><span class="p">&lt;</span><span class="nt">CoreConcept</span><span class="w"> </span><span class="p">{</span><span class="na">...CORE_CONCEPTS</span><span class="err">[</span><span class="na">1</span><span class="err">]</span><span class="p">}</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">                        </span><span class="p">&lt;</span><span class="nt">CoreConcept</span><span class="w"> </span><span class="p">{</span><span class="na">...CORE_CONCEPTS</span><span class="err">[</span><span class="na">2</span><span class="err">]</span><span class="p">}</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">                        </span><span class="p">&lt;</span><span class="nt">CoreConcept</span><span class="w"> </span><span class="p">{</span><span class="na">...CORE_CONCEPTS</span><span class="err">[</span><span class="na">3</span><span class="err">]</span><span class="p">}</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">                    </span><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="w">                </span><span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">App</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li>
+<p>The alternative is fine, but you may want to go with a shorter alternative</p>
+</li>
+<li>
+<p>Within the parameter list, we can use object destructuring </p>
+</li>
+<li>When using destructuring, JavaScript will match the properties coming out of the object as standalone variables within the function.</li>
+<li>Object destructuring can be used with either longhand or shorthand objects on the component itself.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">CoreConcept</span><span class="p">({</span><span class="w"> </span><span class="nx">image</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="p">,</span><span class="w"> </span><span class="nx">description</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">&lt;</span><span class="nt">img</span><span class="w"> </span><span class="na">src</span><span class="o">=</span><span class="p">{</span><span class="nx">image</span><span class="p">}</span><span class="w"> </span><span class="na">alt</span><span class="o">=</span><span class="p">{</span><span class="nx">title</span><span class="p">}</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">            </span><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;{</span><span class="nx">title</span><span class="p">}&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;{</span><span class="nx">description</span><span class="p">}&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="default-prop-values">Default prop values<a class="headerlink" href="#default-prop-values" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sometimes, you'll build components that may receive an optional prop.</li>
+<li>For example, a custom <code>button</code> component may receive a <code>type</code> prop.</li>
+<li>So the button component should be usable either with a type being set:
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">Button</span><span class="w"> </span><span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="w"> </span><span class="na">caption</span><span class="o">=</span><span class="s">&quot;My Button&quot;</span><span class="w"> </span><span class="p">/&gt;</span>
+</code></pre></div></li>
+<li>Or Without
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">Button</span><span class="w"> </span><span class="na">caption</span><span class="o">=</span><span class="s">&quot;My Button&quot;</span>
+</code></pre></div></li>
+<li>To make this component work, you might want to set a default value for the type prop, in case it's not passed.</li>
+<li>This can easily be achieved since JavaScript supports default values when using object destructuring:
+<div class="highlight"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">Button</span><span class="p">({</span><span class="w"> </span><span class="nx">caption</span><span class="p">,</span><span class="w"> </span><span class="nx">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;submit&quot;</span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+<span class="c1">//caption has no default value, type has a default value of &quot;submit&quot;</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../Lifting%20State%20Up/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lifting State Up">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Lifting State Up
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Managing%20State%20and%20Using%20Hooks/" class="md-footer__link md-footer__link--next" aria-label="Next: Managing State and Using Hooks">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Managing State and Using Hooks
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/liamfrazer" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.instant", "navigation.top", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
